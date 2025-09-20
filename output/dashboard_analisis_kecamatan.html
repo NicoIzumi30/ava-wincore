@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analisis Kecamatan - Multi Province</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-bg: #1a1a1a;
+            --secondary-bg: #2d2d30;
+            --card-bg: #252526;
+            --border-color: #3e3e42;
+            --text-primary: #cccccc;
+            --text-secondary: #969696;
+            --accent-orange: #FF6002;
+            --accent-purple: #c586c0;
+            --accent-red: #f44747;
+            --accent-yellow: #dcdcaa;
+            --hover-bg: #2a2d2e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: var(--secondary-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .company-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-image {
+            height: 60px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            filter: brightness(1.1);
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+        
+        .icon-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-logo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 8px 25px rgba(0, 122, 204, 0.4);
+        }
+
+        .brand-identity {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .header-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-orange);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #005a9e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 122, 204, 0.3);
+        }
+
+        .btn-success {
+            background: var(--accent-orange);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #3ba690;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(78, 201, 176, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--hover-bg);
+            transform: translateY(-2px);
+        }
+
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - 120px);
+        }
+
+        .province-filter {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .province-filter:hover {
+            border-color: var(--accent-orange);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .filter-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-label {
+            color: var(--accent-orange);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .filter-select {
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--secondary-bg);
+            color: var(--text-primary);
+            font-size: 14px;
+            min-width: 200px;
+            cursor: pointer;
+        }
+
+        .province-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .province-stat-card {
+            background: var(--secondary-bg);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .province-stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+
+        .filter-info {
+            background: var(--accent-orange);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: none;
+            margin-top: 10px;
+        }
+
+        .filter-info.active {
+            display: block;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            background: var(--secondary-bg);
+            padding: 0.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-tab {
+            padding: 1rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .nav-tab:hover {
+            background: var(--hover-bg);
+            color: var(--text-primary);
+        }
+
+        .nav-tab.active {
+            background: var(--accent-orange);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--accent-orange);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-orange));
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-orange));
+        }
+
+        .chart-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            height: 500px;
+        }
+
+        .chart-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .table-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table th {
+            background: var(--secondary-bg);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .table td {
+            color: var(--text-secondary);
+        }
+
+        .table tr:hover {
+            background: var(--hover-bg);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-success {
+            background: rgba(78, 201, 176, 0.2);
+            color: var(--accent-orange);
+            border: 1px solid var(--accent-orange);
+        }
+
+        .badge-warning {
+            background: rgba(206, 145, 120, 0.2);
+            color: var(--accent-orange);
+            border: 1px solid var(--accent-orange);
+        }
+
+        .badge-danger {
+            background: rgba(244, 71, 71, 0.2);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+        }
+
+        .badge-info {
+            background: rgba(0, 122, 204, 0.2);
+            color: var(--accent-orange);
+            border: 1px solid var(--accent-orange);
+        }
+
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .alert-info {
+            border-color: var(--accent-orange);
+            color: var(--text-primary);
+        }
+
+        .alert-icon {
+            font-size: 1.25rem;
+            margin-top: 0.125rem;
+        }
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .insight-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .insight-card:hover {
+            border-color: var(--accent-orange);
+            box-shadow: 0 8px 32px rgba(78, 201, 176, 0.2);
+        }
+
+        .insight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-orange);
+        }
+
+        .insight-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-orange);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .insight-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .footer-branding {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--secondary-bg);
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .footer-logo {
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            opacity: 0.8;
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-logo-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .main-container {
+                padding: 1rem;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .chart-container {
+                height: 400px;
+            }
+
+            .chart-wrapper {
+                height: 300px;
+            }
+
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-select {
+                min-width: auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-logo-section">
+                <div class="company-logo">
+                    <img src="logo.png" alt="Company Logo" class="logo-image" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="icon-logo" style="display: none;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+                <div class="brand-identity">
+                    <h1 class="header-title">Dashboard Analisis Kecamatan</h1>
+                    <p class="header-subtitle">Sistem analisis distribusi outlet per kecamatan dengan filter multi-provinsi</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <a href="hasil_analisis_kecamatan.xlsx" class="btn btn-success" download>
+                    <i class="fas fa-file-excel"></i>
+                    Download Excel
+                </a>
+                <a href="/" class="btn btn-primary">
+                    <i class="fas fa-map"></i>
+                    Maps Dashboard
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Province Filter Panel -->
+        <div class="province-filter">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <i class="fas fa-map-marked-alt"></i> Filter Provinsi:
+                    </label>
+                    <select id="province-filter" class="filter-select" onchange="filterByProvince()">
+                        <option value="ALL">🌏 Semua Provinsi</option>
+                        <option value="DKI JAKARTA">🏙️ DKI JAKARTA</option><option value="JAWA BARAT">🏔️ JAWA BARAT</option><option value="LAINNYA">📍 LAINNYA</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <button onclick="resetFilter()" class="btn btn-secondary">
+                        <i class="fas fa-refresh"></i> Reset Filter
+                    </button>
+                </div>
+            </div>
+            
+            <div class="filter-info" id="filter-info">
+                <i class="fas fa-info-circle"></i>
+                <span id="filter-text">Menampilkan semua provinsi</span>
+            </div>
+            
+            <!-- Dynamic Province Stats -->
+            <div class="province-stats-grid" id="province-stats">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('insights')">
+                <i class="fas fa-lightbulb"></i>
+                Insight Bisnis
+            </button>
+            <button class="nav-tab" onclick="showTab('charts')">
+                <i class="fas fa-chart-bar"></i>
+                Visualisasi
+            </button>
+            <button class="nav-tab" onclick="showTab('data')">
+                <i class="fas fa-table"></i>
+                Data Lengkap
+            </button>
+            <button class="nav-tab" onclick="showTab('recommendations')">
+                <i class="fas fa-thumbs-up"></i>
+                Rekomendasi
+            </button>
+        </div>
+
+        <div id="insights" class="tab-content active">
+            <div class="stats-grid" id="stats-grid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+
+            <div class="alert alert-info" id="summary-alert">
+                <i class="fas fa-info-circle alert-icon"></i>
+                <div>
+                    <h4>Ringkasan Analisis</h4>
+                    <p id="summary-text">Loading...</p>
+                </div>
+            </div>
+
+            <div class="insight-grid" id="insight-grid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div id="charts" class="tab-content">
+            <div class="grid-2">
+                <div class="chart-container">
+                    <h3 class="chart-title">
+                        <i class="fas fa-chart-bar"></i>
+                        Jumlah Outlet per Kecamatan
+                    </h3>
+                    <div class="chart-wrapper">
+                        <canvas id="outletChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 class="chart-title">
+                        <i class="fas fa-users"></i>
+                        Kepadatan Penduduk per Kecamatan
+                    </h3>
+                    <div class="chart-wrapper">
+                        <canvas id="densityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="chart-container">
+                    <h3 class="chart-title">
+                        <i class="fas fa-chart-line"></i>
+                        Rasio Coverage Outlet
+                    </h3>
+                    <div class="chart-wrapper">
+                        <canvas id="ratioChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 class="chart-title">
+                        <i class="fas fa-chart-pie"></i>
+                        Distribusi Outlet
+                    </h3>
+                    <div class="chart-wrapper">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Korelasi Kepadatan vs Outlet
+                </h3>
+                <div class="chart-wrapper">
+                    <canvas id="scatterChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="data" class="tab-content">
+            <div class="card">
+                <h3 style="color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-table"></i>
+                    Data Analisis Kecamatan
+                    <span id="data-filter-badge" class="badge badge-info" style="margin-left: auto; display: none;">
+                        Filter Aktif
+                    </span>
+                </h3>
+                <div class="table-container">
+                    <table class="table" id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Kecamatan</th>
+                                <th>Jumlah Penduduk</th>
+                                <th>Luas Wilayah (km²)</th>
+                                <th>Jumlah Outlet</th>
+                                <th>Kepadatan (jiwa/km²)</th>
+                                <th>Rasio Coverage</th>
+                                <th>Rekomendasi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-table-body">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="recommendations" class="tab-content">
+            <div class="card">
+                <h3 style="color: var(--accent-purple); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-chess"></i>
+                    Strategi Bisnis
+                    <span id="strategy-filter-badge" class="badge badge-info" style="margin-left: auto; display: none;">
+                        Untuk Provinsi Terpilih
+                    </span>
+                </h3>
+                <div class="insight-content" id="strategy-content">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="color: var(--accent-orange); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-bullseye"></i>
+                    Rekomendasi per Kecamatan
+                </h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Kecamatan</th>
+                                <th>Status</th>
+                                <th>Rasio Coverage</th>
+                                <th>Aksi yang Disarankan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recommendation-table-body">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer dengan logo -->
+        <div class="footer-branding">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Company Logo" 
+                     onerror="this.style.display='none';">
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Dashboard Analisis Kecamatan Multi-Province • Generated on 04 September 2025, 09:38 WIB
+            </p>
+        </div>
+    </div>
+
+    <script>
+        Chart.defaults.color = '#cccccc';
+        Chart.defaults.borderColor = '#3e3e42';
+
+        // Data provinsi dari backend
+        const provinceData = {"DKI JAKARTA": [{"Kecamatan": "BABELAN", "Jumlah Penduduk": 282156.0, "Luas Wilayah": 63.6, "Jumlah Outlet": 122, "Kepadatan Penduduk": 4436.415094339623, "Rasio Outlet": 0.027499681027516695, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BANTAR GEBANG", "Jumlah Penduduk": 111493.0, "Luas Wilayah": 18.34, "Jumlah Outlet": 331, "Kepadatan Penduduk": 6079.225736095965, "Rasio Outlet": 0.05444772317544599, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BATU CEPER", "Jumlah Penduduk": 90053.0, "Luas Wilayah": 8.49, "Jumlah Outlet": 82, "Kepadatan Penduduk": 10606.949352179034, "Rasio Outlet": 0.007730780762439896, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "BEKASI BARAT", "Jumlah Penduduk": 281681.0, "Luas Wilayah": 14.9, "Jumlah Outlet": 201, "Kepadatan Penduduk": 18904.765100671142, "Rasio Outlet": 0.010632240016188524, "Rekomendasi": "Ideal"}, {"Kecamatan": "BEKASI SELATAN", "Jumlah Penduduk": 210805.0, "Luas Wilayah": 15.81, "Jumlah Outlet": 480, "Kepadatan Penduduk": 13333.649588867806, "Rasio Outlet": 0.03599914613031, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BEKASI TIMUR", "Jumlah Penduduk": 257025.0, "Luas Wilayah": 14.63, "Jumlah Outlet": 315, "Kepadatan Penduduk": 17568.352699931645, "Rasio Outlet": 0.017929967901955064, "Rekomendasi": "Ideal"}, {"Kecamatan": "BEKASI UTARA", "Jumlah Penduduk": 337013.0, "Luas Wilayah": 20.8, "Jumlah Outlet": 550, "Kepadatan Penduduk": 16202.548076923076, "Rasio Outlet": 0.03394527807532648, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BOGOR UTARA", "Jumlah Penduduk": 191223.0, "Luas Wilayah": 181374.0, "Jumlah Outlet": 1, "Kepadatan Penduduk": 1.0543021601773133, "Rasio Outlet": 0.9484946894463532, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIBITUNG", "Jumlah Penduduk": 251562.0, "Luas Wilayah": 45.3, "Jumlah Outlet": 126, "Kepadatan Penduduk": 5553.245033112583, "Rasio Outlet": 0.022689436401364275, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIBODAS", "Jumlah Penduduk": 158036.0, "Luas Wilayah": 9.61, "Jumlah Outlet": 83, "Kepadatan Penduduk": 16444.953173777318, "Rasio Outlet": 0.0050471411577109005, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "CIKARANG BARAT", "Jumlah Penduduk": 205333.0, "Luas Wilayah": 43.69, "Jumlah Outlet": 118, "Kepadatan Penduduk": 4699.77111467155, "Rasio Outlet": 0.025107605694165085, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIKARANG SELATAN", "Jumlah Penduduk": 161534.0, "Luas Wilayah": 49.5, "Jumlah Outlet": 86, "Kepadatan Penduduk": 3263.313131313131, "Rasio Outlet": 0.026353585003776294, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIKARANG UTARA", "Jumlah Penduduk": 233150.0, "Luas Wilayah": 43.3, "Jumlah Outlet": 77, "Kepadatan Penduduk": 5384.526558891455, "Rasio Outlet": 0.014300235899635425, "Rekomendasi": "Ideal"}, {"Kecamatan": "CIKUPA", "Jumlah Penduduk": 289065.0, "Luas Wilayah": 46.0, "Jumlah Outlet": 2, "Kepadatan Penduduk": 6284.021739130435, "Rasio Outlet": 0.00031826751768633353, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CIOMAS", "Jumlah Penduduk": 178534.0, "Luas Wilayah": 17.88, "Jumlah Outlet": 5, "Kepadatan Penduduk": 9985.123042505593, "Rasio Outlet": 0.0005007449561428075, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CIPONDOH", "Jumlah Penduduk": 231127.0, "Luas Wilayah": 17.91, "Jumlah Outlet": 81, "Kepadatan Penduduk": 12904.913456169737, "Rasio Outlet": 0.00627667905523803, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "CURUG", "Jumlah Penduduk": 59783.0, "Luas Wilayah": 38.96, "Jumlah Outlet": 63, "Kepadatan Penduduk": 1534.471252566735, "Rasio Outlet": 0.04105648763026279, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "DRAMAGA", "Jumlah Penduduk": 113736.0, "Luas Wilayah": 25.57, "Jumlah Outlet": 1, "Kepadatan Penduduk": 4448.025029331247, "Rasio Outlet": 0.00022481887880706198, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "JATI SAMPURNA", "Jumlah Penduduk": 129539.0, "Luas Wilayah": 19.53, "Jumlah Outlet": 32, "Kepadatan Penduduk": 6632.821300563236, "Rasio Outlet": 0.0048244930098271565, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "JATIASIH", "Jumlah Penduduk": 247362.0, "Luas Wilayah": 24.26, "Jumlah Outlet": 465, "Kepadatan Penduduk": 10196.29018961253, "Rasio Outlet": 0.045604822082615765, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "JATISAMPURNA", "Jumlah Penduduk": 123924.0, "Luas Wilayah": 20.19, "Jumlah Outlet": 170, "Kepadatan Penduduk": 6137.890044576523, "Rasio Outlet": 0.027696814176430717, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "KARAWACI", "Jumlah Penduduk": 193480.0, "Luas Wilayah": 13.48, "Jumlah Outlet": 192, "Kepadatan Penduduk": 14353.115727002967, "Rasio Outlet": 0.01337688649989663, "Rekomendasi": "Ideal"}, {"Kecamatan": "KELAPA DUA", "Jumlah Penduduk": 167553.0, "Luas Wilayah": 26.22, "Jumlah Outlet": 183, "Kepadatan Penduduk": 6390.274599542335, "Rasio Outlet": 0.028637267014019443, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "LEGOK", "Jumlah Penduduk": 124324.0, "Luas Wilayah": 37.28, "Jumlah Outlet": 18, "Kepadatan Penduduk": 3334.871244635193, "Rasio Outlet": 0.005397509732634085, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "MEDANSATRIA", "Jumlah Penduduk": 162119.0, "Luas Wilayah": 13.21, "Jumlah Outlet": 321, "Kepadatan Penduduk": 12272.445117335352, "Rasio Outlet": 0.02615615689709411, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "MUSTIKA JAYA", "Jumlah Penduduk": 213515.0, "Luas Wilayah": 24.76, "Jumlah Outlet": 1, "Kepadatan Penduduk": 8623.3844911147, "Rasio Outlet": 0.00011596374961946467, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "MUSTIKAJAYA", "Jumlah Penduduk": 221782.0, "Luas Wilayah": 22.17, "Jumlah Outlet": 57, "Kepadatan Penduduk": 10003.698691926025, "Rasio Outlet": 0.005697892525092209, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "NEGLASARI", "Jumlah Penduduk": 124907.0, "Luas Wilayah": 16.08, "Jumlah Outlet": 3, "Kepadatan Penduduk": 7767.848258706468, "Rasio Outlet": 0.0003862073382596652, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PINANG", "Jumlah Penduduk": 186671.0, "Luas Wilayah": 21.59, "Jumlah Outlet": 3, "Kepadatan Penduduk": 8646.17878647522, "Rasio Outlet": 0.0003469740881015262, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PONDOK AREN", "Jumlah Penduduk": 418420.0, "Luas Wilayah": 29.88, "Jumlah Outlet": 159, "Kepadatan Penduduk": 14003.346720214191, "Rasio Outlet": 0.011354428564600163, "Rekomendasi": "Ideal"}, {"Kecamatan": "PONDOKGEDE", "Jumlah Penduduk": 251195.0, "Luas Wilayah": 17.43, "Jumlah Outlet": 222, "Kepadatan Penduduk": 14411.646586345381, "Rasio Outlet": 0.01540420788630347, "Rekomendasi": "Ideal"}, {"Kecamatan": "RAJEG", "Jumlah Penduduk": 185014.0, "Luas Wilayah": 53.3, "Jumlah Outlet": 1, "Kepadatan Penduduk": 3471.1819887429647, "Rasio Outlet": 0.0002880863069821743, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "RAWALUMBU", "Jumlah Penduduk": 220699.0, "Luas Wilayah": 16.85, "Jumlah Outlet": 441, "Kepadatan Penduduk": 13097.863501483678, "Rasio Outlet": 0.03366961336480909, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "SETU", "Jumlah Penduduk": 92890.0, "Luas Wilayah": 14.8, "Jumlah Outlet": 339, "Kepadatan Penduduk": 6276.351351351351, "Rasio Outlet": 0.05401227258047153, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "SUKAMULYA", "Jumlah Penduduk": 74309.0, "Luas Wilayah": 25.44, "Jumlah Outlet": 1, "Kepadatan Penduduk": 2920.951257861635, "Rasio Outlet": 0.0003423542235799163, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "TAMBUN SELATAN", "Jumlah Penduduk": 431038.0, "Luas Wilayah": 43.1, "Jumlah Outlet": 787, "Kepadatan Penduduk": 10000.881670533643, "Rasio Outlet": 0.07869306186461518, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "TANAH SAREAL", "Jumlah Penduduk": 226079.0, "Luas Wilayah": 206001.0, "Jumlah Outlet": 7, "Kepadatan Penduduk": 1.097465546283756, "Rasio Outlet": 6.37833235285011, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "TANGERANG", "Jumlah Penduduk": 165575.0, "Luas Wilayah": 15.79, "Jumlah Outlet": 1, "Kepadatan Penduduk": 10486.067131095631, "Rasio Outlet": 9.536463838139815e-05, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "TARUMAJAYA", "Jumlah Penduduk": 13973.0, "Luas Wilayah": 53.84, "Jumlah Outlet": 450, "Kepadatan Penduduk": 259.5282317979198, "Rasio Outlet": 1.7339154082874113, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}], "JAWA BARAT": [{"Kecamatan": "BABAKAN MADANG", "Jumlah Penduduk": 118805.0, "Luas Wilayah": 88.58, "Jumlah Outlet": 33, "Kepadatan Penduduk": 1341.216979002032, "Rasio Outlet": 0.024604520011784013, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BABELAN", "Jumlah Penduduk": 282156.0, "Luas Wilayah": 63.6, "Jumlah Outlet": 1, "Kepadatan Penduduk": 4436.415094339623, "Rasio Outlet": 0.00022540722153702208, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BALARAJA", "Jumlah Penduduk": 167553.0, "Luas Wilayah": 32.3, "Jumlah Outlet": 1, "Kepadatan Penduduk": 5187.399380804954, "Rasio Outlet": 0.00019277482348868717, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BANTAR GEBANG", "Jumlah Penduduk": 111493.0, "Luas Wilayah": 18.34, "Jumlah Outlet": 19, "Kepadatan Penduduk": 6079.225736095965, "Rasio Outlet": 0.00312539800704977, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BATU CEPER", "Jumlah Penduduk": 90053.0, "Luas Wilayah": 8.49, "Jumlah Outlet": 4, "Kepadatan Penduduk": 10606.949352179034, "Rasio Outlet": 0.0003771112567043852, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BEKASI BARAT", "Jumlah Penduduk": 281681.0, "Luas Wilayah": 14.9, "Jumlah Outlet": 7, "Kepadatan Penduduk": 18904.765100671142, "Rasio Outlet": 0.00037027701548915257, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BEKASI SELATAN", "Jumlah Penduduk": 210805.0, "Luas Wilayah": 15.81, "Jumlah Outlet": 10, "Kepadatan Penduduk": 13333.649588867806, "Rasio Outlet": 0.000749982211048125, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BEKASI TIMUR", "Jumlah Penduduk": 257025.0, "Luas Wilayah": 14.63, "Jumlah Outlet": 19, "Kepadatan Penduduk": 17568.352699931645, "Rasio Outlet": 0.0010814901274195118, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BEKASI UTARA", "Jumlah Penduduk": 337013.0, "Luas Wilayah": 20.8, "Jumlah Outlet": 60, "Kepadatan Penduduk": 16202.548076923076, "Rasio Outlet": 0.0037031212445810696, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BOGOR BARAT", "Jumlah Penduduk": 239980.0, "Luas Wilayah": 233155.0, "Jumlah Outlet": 173, "Kepadatan Penduduk": 1.0292723724560915, "Rasio Outlet": 168.07990249187432, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BOGOR SELATAN", "Jumlah Penduduk": 210552.0, "Luas Wilayah": 305021.0, "Jumlah Outlet": 101, "Kepadatan Penduduk": 0.6902868982791349, "Rasio Outlet": 146.31597420114744, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BOGOR TENGAH", "Jumlah Penduduk": 96001.0, "Luas Wilayah": 83667.0, "Jumlah Outlet": 81, "Kepadatan Penduduk": 1.1474177393715563, "Rasio Outlet": 70.59329590316767, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BOGOR TIMUR", "Jumlah Penduduk": 106884.0, "Luas Wilayah": 10464.0, "Jumlah Outlet": 22, "Kepadatan Penduduk": 10.214449541284404, "Rasio Outlet": 2.1538116088469743, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BOGOR UTARA", "Jumlah Penduduk": 191223.0, "Luas Wilayah": 181374.0, "Jumlah Outlet": 173, "Kepadatan Penduduk": 1.0543021601773133, "Rasio Outlet": 164.08958127421909, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "BOJONG GEDE", "Jumlah Penduduk": 308435.0, "Luas Wilayah": 28.93, "Jumlah Outlet": 162, "Kepadatan Penduduk": 10661.424127203594, "Rasio Outlet": 0.015194968145638464, "Rekomendasi": "Ideal"}, {"Kecamatan": "CIAMPEA", "Jumlah Penduduk": 176388.0, "Luas Wilayah": 33.98, "Jumlah Outlet": 3, "Kepadatan Penduduk": 5190.93584461448, "Rasio Outlet": 0.0005779304714606435, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CIBARUSAH", "Jumlah Penduduk": 114717.0, "Luas Wilayah": 47.81, "Jumlah Outlet": 87, "Kepadatan Penduduk": 2399.435264588998, "Rasio Outlet": 0.03625853186537305, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIBINONG", "Jumlah Penduduk": 376697.0, "Luas Wilayah": 47.08, "Jumlah Outlet": 345, "Kepadatan Penduduk": 8001.210705182668, "Rasio Outlet": 0.04311847452992723, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIBITUNG", "Jumlah Penduduk": 251562.0, "Luas Wilayah": 45.3, "Jumlah Outlet": 369, "Kepadatan Penduduk": 5553.245033112583, "Rasio Outlet": 0.06644763517542394, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIBODAS", "Jumlah Penduduk": 158036.0, "Luas Wilayah": 9.61, "Jumlah Outlet": 3, "Kepadatan Penduduk": 16444.953173777318, "Rasio Outlet": 0.0001824267888329241, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CIKARANG BARAT", "Jumlah Penduduk": 205333.0, "Luas Wilayah": 43.69, "Jumlah Outlet": 377, "Kepadatan Penduduk": 4699.77111467155, "Rasio Outlet": 0.08021667242966302, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIKARANG SELATAN", "Jumlah Penduduk": 161534.0, "Luas Wilayah": 49.5, "Jumlah Outlet": 528, "Kepadatan Penduduk": 3263.313131313131, "Rasio Outlet": 0.16179875444178934, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIKARANG UTARA", "Jumlah Penduduk": 233150.0, "Luas Wilayah": 43.3, "Jumlah Outlet": 502, "Kepadatan Penduduk": 5384.526558891455, "Rasio Outlet": 0.09323010937164915, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIOMAS", "Jumlah Penduduk": 178534.0, "Luas Wilayah": 17.88, "Jumlah Outlet": 127, "Kepadatan Penduduk": 9985.123042505593, "Rasio Outlet": 0.01271892188602731, "Rekomendasi": "Ideal"}, {"Kecamatan": "CIPONDOH", "Jumlah Penduduk": 231127.0, "Luas Wilayah": 17.91, "Jumlah Outlet": 4, "Kepadatan Penduduk": 12904.913456169737, "Rasio Outlet": 0.0003099594595179274, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CITEUREUP", "Jumlah Penduduk": 220094.0, "Luas Wilayah": 72.32, "Jumlah Outlet": 293, "Kepadatan Penduduk": 3043.3351769911505, "Rasio Outlet": 0.09627595481930448, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CURUG", "Jumlah Penduduk": 59783.0, "Luas Wilayah": 38.96, "Jumlah Outlet": 12, "Kepadatan Penduduk": 1534.471252566735, "Rasio Outlet": 0.007820283358145292, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "DRAMAGA", "Jumlah Penduduk": 113736.0, "Luas Wilayah": 25.57, "Jumlah Outlet": 138, "Kepadatan Penduduk": 4448.025029331247, "Rasio Outlet": 0.03102500527537455, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "JATIASIH", "Jumlah Penduduk": 247362.0, "Luas Wilayah": 24.26, "Jumlah Outlet": 22, "Kepadatan Penduduk": 10196.29018961253, "Rasio Outlet": 0.002157647496381821, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "JATISAMPURNA", "Jumlah Penduduk": 123924.0, "Luas Wilayah": 20.19, "Jumlah Outlet": 99, "Kepadatan Penduduk": 6137.890044576523, "Rasio Outlet": 0.016129321196862594, "Rekomendasi": "Ideal"}, {"Kecamatan": "KARAWACI", "Jumlah Penduduk": 193480.0, "Luas Wilayah": 13.48, "Jumlah Outlet": 38, "Kepadatan Penduduk": 14353.115727002967, "Rasio Outlet": 0.0026475087864378747, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "KELAPA DUA", "Jumlah Penduduk": 167553.0, "Luas Wilayah": 26.22, "Jumlah Outlet": 31, "Kepadatan Penduduk": 6390.274599542335, "Rasio Outlet": 0.004851121734615315, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "KEMANG", "Jumlah Penduduk": 109526.0, "Luas Wilayah": 33.09, "Jumlah Outlet": 99, "Kepadatan Penduduk": 3309.9425808401325, "Rasio Outlet": 0.029909884411007434, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "LEGOK", "Jumlah Penduduk": 124324.0, "Luas Wilayah": 37.28, "Jumlah Outlet": 12, "Kepadatan Penduduk": 3334.871244635193, "Rasio Outlet": 0.0035983398217560567, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "MEDANSATRIA", "Jumlah Penduduk": 162119.0, "Luas Wilayah": 13.21, "Jumlah Outlet": 4, "Kepadatan Penduduk": 12272.445117335352, "Rasio Outlet": 0.0003259334192784313, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PINANG", "Jumlah Penduduk": 186671.0, "Luas Wilayah": 21.59, "Jumlah Outlet": 13, "Kepadatan Penduduk": 8646.17878647522, "Rasio Outlet": 0.0015035543817732801, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PONDOK AREN", "Jumlah Penduduk": 418420.0, "Luas Wilayah": 29.88, "Jumlah Outlet": 18, "Kepadatan Penduduk": 14003.346720214191, "Rasio Outlet": 0.001285407007313226, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PONDOKGEDE", "Jumlah Penduduk": 251195.0, "Luas Wilayah": 17.43, "Jumlah Outlet": 34, "Kepadatan Penduduk": 14411.646586345381, "Rasio Outlet": 0.002359203009614045, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "RANCA BUNGUR", "Jumlah Penduduk": 65058.0, "Luas Wilayah": 23.18, "Jumlah Outlet": 21, "Kepadatan Penduduk": 2806.6436583261434, "Rasio Outlet": 0.007482246610716591, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "RAWALUMBU", "Jumlah Penduduk": 220699.0, "Luas Wilayah": 16.85, "Jumlah Outlet": 6, "Kepadatan Penduduk": 13097.863501483678, "Rasio Outlet": 0.00045808997775250457, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "SETU", "Jumlah Penduduk": 92890.0, "Luas Wilayah": 14.8, "Jumlah Outlet": 70, "Kepadatan Penduduk": 6276.351351351351, "Rasio Outlet": 0.01115297663903542, "Rekomendasi": "Ideal"}, {"Kecamatan": "SUKARAJA", "Jumlah Penduduk": 219532.0, "Luas Wilayah": 43.49, "Jumlah Outlet": 75, "Kepadatan Penduduk": 5047.873074269947, "Rasio Outlet": 0.014857742834757576, "Rekomendasi": "Ideal"}, {"Kecamatan": "TAJURHALANG", "Jumlah Penduduk": 134642.0, "Luas Wilayah": 30.38, "Jumlah Outlet": 36, "Kepadatan Penduduk": 4431.928900592495, "Rasio Outlet": 0.00812287399177077, "Rekomendasi": "Cukup padat - Perlu pertimbangkan outlet baru"}, {"Kecamatan": "TAMANSARI", "Jumlah Penduduk": 65856.0, "Luas Wilayah": 36.76, "Jumlah Outlet": 3, "Kepadatan Penduduk": 1791.5125136017411, "Rasio Outlet": 0.0016745626822157432, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "TAMBUN SELATAN", "Jumlah Penduduk": 431038.0, "Luas Wilayah": 43.1, "Jumlah Outlet": 236, "Kepadatan Penduduk": 10000.881670533643, "Rasio Outlet": 0.02359791944097736, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "TANAH SAREAL", "Jumlah Penduduk": 226079.0, "Luas Wilayah": 206001.0, "Jumlah Outlet": 498, "Kepadatan Penduduk": 1.097465546283756, "Rasio Outlet": 453.77278738847923, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "TARUMAJAYA", "Jumlah Penduduk": 13973.0, "Luas Wilayah": 53.84, "Jumlah Outlet": 68, "Kepadatan Penduduk": 259.5282317979198, "Rasio Outlet": 0.2620138839189866, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}], "LAINNYA": [{"Kecamatan": "BANTAR GEBANG", "Jumlah Penduduk": 111493.0, "Luas Wilayah": 18.34, "Jumlah Outlet": 1, "Kepadatan Penduduk": 6079.225736095965, "Rasio Outlet": 0.0001644946319499879, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BEKASI SELATAN", "Jumlah Penduduk": 210805.0, "Luas Wilayah": 15.81, "Jumlah Outlet": 1, "Kepadatan Penduduk": 13333.649588867806, "Rasio Outlet": 7.499822110481251e-05, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BEKASI TIMUR", "Jumlah Penduduk": 257025.0, "Luas Wilayah": 14.63, "Jumlah Outlet": 1, "Kepadatan Penduduk": 17568.352699931645, "Rasio Outlet": 5.692053302207957e-05, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "BOGOR BARAT", "Jumlah Penduduk": 239980.0, "Luas Wilayah": 233155.0, "Jumlah Outlet": 2, "Kepadatan Penduduk": 1.0292723724560915, "Rasio Outlet": 1.9431202600216684, "Rekomendasi": "Sudah cukup - Fokus pada kualitas"}, {"Kecamatan": "CIBITUNG", "Jumlah Penduduk": 251562.0, "Luas Wilayah": 45.3, "Jumlah Outlet": 1, "Kepadatan Penduduk": 5553.245033112583, "Rasio Outlet": 0.00018007489207431964, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CIKARANG UTARA", "Jumlah Penduduk": 233150.0, "Luas Wilayah": 43.3, "Jumlah Outlet": 2, "Kepadatan Penduduk": 5384.526558891455, "Rasio Outlet": 0.00037143469869182924, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CIKUPA", "Jumlah Penduduk": 289065.0, "Luas Wilayah": 46.0, "Jumlah Outlet": 18, "Kepadatan Penduduk": 6284.021739130435, "Rasio Outlet": 0.0028644076591770014, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "CURUG", "Jumlah Penduduk": 59783.0, "Luas Wilayah": 38.96, "Jumlah Outlet": 16, "Kepadatan Penduduk": 1534.471252566735, "Rasio Outlet": 0.010427044477527056, "Rekomendasi": "Ideal"}, {"Kecamatan": "LEGOK", "Jumlah Penduduk": 124324.0, "Luas Wilayah": 37.28, "Jumlah Outlet": 7, "Kepadatan Penduduk": 3334.871244635193, "Rasio Outlet": 0.0020990315626910334, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "MEDANSATRIA", "Jumlah Penduduk": 162119.0, "Luas Wilayah": 13.21, "Jumlah Outlet": 1, "Kepadatan Penduduk": 12272.445117335352, "Rasio Outlet": 8.148335481960782e-05, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PINANG", "Jumlah Penduduk": 186671.0, "Luas Wilayah": 21.59, "Jumlah Outlet": 10, "Kepadatan Penduduk": 8646.17878647522, "Rasio Outlet": 0.001156580293671754, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PONDOK AREN", "Jumlah Penduduk": 418420.0, "Luas Wilayah": 29.88, "Jumlah Outlet": 7, "Kepadatan Penduduk": 14003.346720214191, "Rasio Outlet": 0.0004998805028440322, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "PONDOKGEDE", "Jumlah Penduduk": 251195.0, "Luas Wilayah": 17.43, "Jumlah Outlet": 1, "Kepadatan Penduduk": 14411.646586345381, "Rasio Outlet": 6.938832381217779e-05, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "TAMANSARI", "Jumlah Penduduk": 65856.0, "Luas Wilayah": 36.76, "Jumlah Outlet": 1, "Kepadatan Penduduk": 1791.5125136017411, "Rasio Outlet": 0.0005581875607385811, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "TAMBUN SELATAN", "Jumlah Penduduk": 431038.0, "Luas Wilayah": 43.1, "Jumlah Outlet": 4, "Kepadatan Penduduk": 10000.881670533643, "Rasio Outlet": 0.0003999647362877519, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "TANGERANG", "Jumlah Penduduk": 165575.0, "Luas Wilayah": 15.79, "Jumlah Outlet": 6, "Kepadatan Penduduk": 10486.067131095631, "Rasio Outlet": 0.0005721878302883889, "Rekomendasi": "Padat - Butuh outlet baru"}, {"Kecamatan": "TARUMAJAYA", "Jumlah Penduduk": 13973.0, "Luas Wilayah": 53.84, "Jumlah Outlet": 1, "Kepadatan Penduduk": 259.5282317979198, "Rasio Outlet": 0.003853145351749803, "Rekomendasi": "Padat - Butuh outlet baru"}]};
+        const provinceStats = {"DKI JAKARTA": {"total_kecamatan": 39, "total_outlets": 6577, "avg_density": 8382.64250869491, "avg_ratio": 0.24981801657464564}, "JAWA BARAT": {"total_kecamatan": 47, "total_outlets": 5037, "avg_density": 6892.745161968725, "avg_ratio": 21.4059380169156}, "LAINNYA": {"total_kecamatan": 17, "total_outlets": 80, "avg_density": 7702.647051941374, "avg_ratio": 0.11567938145012462}};
+        
+        let currentProvince = 'ALL';
+        let currentData = [];
+        let currentCharts = {};
+        
+        // Chart options
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#cccccc',
+                        usePointStyle: true,
+                        padding: 20
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#969696' },
+                    grid: { color: '#3e3e42' }
+                },
+                y: {
+                    ticks: { color: '#969696' },
+                    grid: { color: '#3e3e42' }
+                }
+            }
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCurrentData();
+            updateProvinceStats();
+            updateStatsGrid();
+            updateInsights();
+            updateDataTable();
+            updateRecommendationTable();
+            updateStrategyContent();
+        });
+        
+        function filterByProvince() {
+            const select = document.getElementById('province-filter');
+            currentProvince = select.value;
+            
+            updateCurrentData();
+            updateFilterInfo();
+            updateProvinceStats();
+            updateStatsGrid();
+            updateInsights();
+            updateDataTable();
+            updateRecommendationTable();
+            updateStrategyContent();
+            updateCharts();
+        }
+        
+        function updateCurrentData() {
+            if (currentProvince === 'ALL') {
+                currentData = [];
+                Object.values(provinceData).forEach(provinceResults => {
+                    currentData = currentData.concat(provinceResults);
+                });
+            } else {
+                currentData = provinceData[currentProvince] || [];
+            }
+        }
+        
+        function updateFilterInfo() {
+            const filterInfo = document.getElementById('filter-info');
+            const filterText = document.getElementById('filter-text');
+            
+            if (currentProvince === 'ALL') {
+                filterInfo.classList.remove('active');
+            } else {
+                filterInfo.classList.add('active');
+                filterText.textContent = `Menampilkan data untuk: ${currentProvince}`;
+            }
+            
+            // Update filter badges
+            const dataFilterBadge = document.getElementById('data-filter-badge');
+            const strategyFilterBadge = document.getElementById('strategy-filter-badge');
+            
+            if (currentProvince !== 'ALL') {
+                dataFilterBadge.style.display = 'inline-block';
+                strategyFilterBadge.style.display = 'inline-block';
+                dataFilterBadge.textContent = `Filter: ${currentProvince}`;
+            } else {
+                dataFilterBadge.style.display = 'none';
+                strategyFilterBadge.style.display = 'none';
+            }
+        }
+        
+        function updateProvinceStats() {
+            const statsContainer = document.getElementById('province-stats');
+            
+            if (currentProvince === 'ALL') {
+                // Show summary of all provinces
+                const totalKecamatan = Object.values(provinceStats).reduce((sum, stat) => sum + stat.total_kecamatan, 0);
+                const totalOutlets = Object.values(provinceStats).reduce((sum, stat) => sum + stat.total_outlets, 0);
+                const avgDensity = Object.values(provinceStats).reduce((sum, stat) => sum + stat.avg_density, 0) / Object.keys(provinceStats).length;
+                
+                statsContainer.innerHTML = `
+                    <div class="province-stat-card">
+                        <div class="stat-value">${totalKecamatan}</div>
+                        <div class="stat-label">Total Kecamatan</div>
+                    </div>
+                    <div class="province-stat-card">
+                        <div class="stat-value">${totalOutlets}</div>
+                        <div class="stat-label">Total Outlets</div>
+                    </div>
+                    <div class="province-stat-card">
+                        <div class="stat-value">${avgDensity.toFixed(0)}</div>
+                        <div class="stat-label">Rata-rata Kepadatan</div>
+                    </div>
+                    <div class="province-stat-card">
+                        <div class="stat-value">${Object.keys(provinceStats).length}</div>
+                        <div class="stat-label">Provinsi Tersedia</div>
+                    </div>
+                `;
+            } else {
+                // Show specific province stats
+                const stats = provinceStats[currentProvince];
+                if (stats) {
+                    statsContainer.innerHTML = `
+                        <div class="province-stat-card">
+                            <div class="stat-value">${stats.total_kecamatan}</div>
+                            <div class="stat-label">Kecamatan</div>
+                        </div>
+                        <div class="province-stat-card">
+                            <div class="stat-value">${stats.total_outlets}</div>
+                            <div class="stat-label">Outlets</div>
+                        </div>
+                        <div class="province-stat-card">
+                            <div class="stat-value">${stats.avg_density.toFixed(0)}</div>
+                            <div class="stat-label">Kepadatan Rata-rata</div>
+                        </div>
+                        <div class="province-stat-card">
+                            <div class="stat-value">${stats.avg_ratio.toFixed(6)}</div>
+                            <div class="stat-label">Rasio Rata-rata</div>
+                        </div>
+                    `;
+                } else {
+                    statsContainer.innerHTML = '<div class="province-stat-card"><div class="stat-value">0</div><div class="stat-label">Tidak ada data</div></div>';
+                }
+            }
+        }
+        
+        function updateStatsGrid() {
+            const statsGrid = document.getElementById('stats-grid');
+            
+            if (currentData.length === 0) {
+                statsGrid.innerHTML = '<div class="stat-card"><div class="stat-number">0</div><div class="stat-label">Tidak ada data</div></div>';
+                return;
+            }
+            
+            const totalKecamatan = currentData.length;
+            const totalOutlets = currentData.reduce((sum, item) => sum + item['Jumlah Outlet'], 0);
+            const avgDensity = currentData.reduce((sum, item) => sum + item['Kepadatan Penduduk'], 0) / totalKecamatan;
+            const avgRatio = currentData.reduce((sum, item) => sum + item['Rasio Outlet'], 0) / totalKecamatan;
+            
+            statsGrid.innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${totalKecamatan}</div>
+                    <div class="stat-label">Total Kecamatan</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${totalOutlets}</div>
+                    <div class="stat-label">Total Outlets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${avgDensity.toFixed(0)}</div>
+                    <div class="stat-label">Rata-rata Kepadatan</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">${avgRatio.toFixed(6)}</div>
+                    <div class="stat-label">Rasio Coverage</div>
+                </div>
+            `;
+        }
+        
+        function updateInsights() {
+            const summaryText = document.getElementById('summary-text');
+            const insightGrid = document.getElementById('insight-grid');
+            
+            if (currentData.length === 0) {
+                summaryText.textContent = 'Tidak ada data untuk provinsi yang dipilih.';
+                insightGrid.innerHTML = '<div class="insight-card"><div class="insight-title">Tidak ada data</div><div class="insight-content">Silakan pilih provinsi lain.</div></div>';
+                return;
+            }
+            
+            // Generate insights untuk data saat ini
+            const totalKecamatan = currentData.length;
+            const outletCounts = {};
+            
+            currentData.forEach(item => {
+                const rekomendasi = item['Rekomendasi'];
+                outletCounts[rekomendasi] = (outletCounts[rekomendasi] || 0) + 1;
+            });
+            
+            const needNewOutlets = outletCounts['Padat - Butuh outlet baru'] || 0;
+            const ideal = outletCounts['Ideal'] || 0;
+            
+            const prefix = currentProvince !== 'ALL' ? `Provinsi ${currentProvince}: ` : '';
+            
+            summaryText.textContent = `${prefix}Dari analisis ${totalKecamatan} kecamatan, ditemukan bahwa ${needNewOutlets} kecamatan membutuhkan outlet baru, dan ${ideal} kecamatan memiliki rasio outlet yang ideal.`;
+            
+            // Top kecamatan berdasarkan berbagai metrik
+            const sortedByDensity = [...currentData].sort((a, b) => b['Kepadatan Penduduk'] - a['Kepadatan Penduduk']);
+            const sortedByOutlets = [...currentData].sort((a, b) => b['Jumlah Outlet'] - a['Jumlah Outlet']);
+            const sortedByRatio = [...currentData].sort((a, b) => b['Rasio Outlet'] - a['Rasio Outlet']);
+            
+            insightGrid.innerHTML = `
+                <div class="insight-card">
+                    <h3 class="insight-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Rekomendasi Ekspansi
+                    </h3>
+                    <p class="insight-content">${prefix}Kecamatan yang paling membutuhkan outlet baru adalah: ${sortedByRatio.slice(0, 3).map(item => item.Kecamatan).join(', ')}. Kecamatan-kecamatan ini memiliki rasio outlet yang rendah.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 class="insight-title">
+                        <i class="fas fa-users"></i>
+                        Insight Kepadatan
+                    </h3>
+                    <p class="insight-content">${prefix}Kecamatan dengan kepadatan penduduk tertinggi adalah: ${sortedByDensity.slice(0, 3).map(item => item.Kecamatan).join(', ')}. Area padat penduduk ini berpotensi memiliki traffic pelanggan yang tinggi.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 class="insight-title">
+                        <i class="fas fa-store"></i>
+                        Distribusi Outlet
+                    </h3>
+                    <p class="insight-content">${prefix}Distribusi outlet saat ini terkonsentrasi di kecamatan: ${sortedByOutlets.slice(0, 3).map(item => item.Kecamatan).join(', ')}.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 class="insight-title">
+                        <i class="fas fa-chart-line"></i>
+                        Analisis Korelasi
+                    </h3>
+                    <p class="insight-content">${prefix}Berdasarkan data saat ini, terdapat hubungan antara kepadatan penduduk dan distribusi outlet yang perlu dioptimalkan untuk strategi bisnis yang lebih baik.</p>
+                </div>
+            `;
+        }
+        
+        function updateDataTable() {
+            const tableBody = document.getElementById('data-table-body');
+            
+            if (currentData.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-secondary);">Tidak ada data untuk provinsi yang dipilih</td></tr>';
+                return;
+            }
+            
+            let tableHTML = '';
+            currentData.forEach(item => {
+                let badgeClass = 'badge-info';
+                if (item['Rekomendasi'].includes('Butuh outlet baru')) {
+                    badgeClass = 'badge-danger';
+                } else if (item['Rekomendasi'].includes('Perlu pertimbangkan')) {
+                    badgeClass = 'badge-warning';
+                } else if (item['Rekomendasi'].includes('Ideal')) {
+                    badgeClass = 'badge-success';
+                }
+                
+                tableHTML += `
+                    <tr>
+                        <td><strong>${item['Kecamatan']}</strong></td>
+                        <td>${item['Jumlah Penduduk'].toLocaleString()}</td>
+                        <td>${item['Luas Wilayah'].toFixed(2)}</td>
+                        <td>${item['Jumlah Outlet']}</td>
+                        <td>${item['Kepadatan Penduduk'].toLocaleString()}</td>
+                        <td>${item['Rasio Outlet'].toFixed(6)}</td>
+                        <td><span class="badge ${badgeClass}">${item['Rekomendasi']}</span></td>
+                    </tr>
+                `;
+            });
+            
+            tableBody.innerHTML = tableHTML;
+        }
+        
+        function updateRecommendationTable() {
+            const tableBody = document.getElementById('recommendation-table-body');
+            
+            if (currentData.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: var(--text-secondary);">Tidak ada data untuk provinsi yang dipilih</td></tr>';
+                return;
+            }
+            
+            // Sort by rasio outlet untuk rekomendasi
+            const sortedData = [...currentData].sort((a, b) => a['Rasio Outlet'] - b['Rasio Outlet']);
+            
+            let tableHTML = '';
+            sortedData.forEach(item => {
+                let badgeClass = 'badge-info';
+                let action = '';
+                
+                if (item['Rekomendasi'].includes('Butuh outlet baru')) {
+                    badgeClass = 'badge-danger';
+                    action = 'Prioritaskan untuk pembukaan outlet baru';
+                } else if (item['Rekomendasi'].includes('Perlu pertimbangkan')) {
+                    badgeClass = 'badge-warning';
+                    action = 'Evaluasi potensi pasar untuk outlet baru';
+                } else if (item['Rekomendasi'].includes('Ideal')) {
+                    badgeClass = 'badge-success';
+                    action = 'Pertahankan dan optimalkan outlet yang ada';
+                } else {
+                    badgeClass = 'badge-info';
+                    action = 'Fokus pada peningkatan kualitas layanan';
+                }
+                
+                tableHTML += `
+                    <tr>
+                        <td><strong>${item['Kecamatan']}</strong></td>
+                        <td><span class="badge ${badgeClass}">${item['Rekomendasi']}</span></td>
+                        <td>${item['Rasio Outlet'].toFixed(6)}</td>
+                        <td>${action}</td>
+                    </tr>
+                `;
+            });
+            
+            tableBody.innerHTML = tableHTML;
+        }
+        
+        function updateStrategyContent() {
+            const strategyContent = document.getElementById('strategy-content');
+            
+            const prefix = currentProvince !== 'ALL' ? `Provinsi ${currentProvince}` : 'Semua Provinsi';
+            
+            strategyContent.innerHTML = `
+                <h4 style="color: var(--accent-orange); margin-bottom: 1rem;">Strategi Bisnis untuk ${prefix}:</h4>
+                <ol style="line-height: 2; color: var(--text-secondary);">
+                    <li><strong>Ekspansi Bertahap:</strong> Fokus pembukaan outlet baru di kecamatan dengan rasio outlet sangat rendah (&lt;0.005).</li>
+                    <li><strong>Evaluasi Potensi:</strong> Di kecamatan dengan rasio outlet rendah (0.005-0.010), lakukan studi kelayaban untuk outlet baru.</li>
+                    <li><strong>Optimalisasi:</strong> Di kecamatan dengan rasio outlet ideal (0.010-0.020), pertahankan dan tingkatkan kualitas layanan.</li>
+                    <li><strong>Fokus Kualitas:</strong> Di kecamatan dengan rasio outlet tinggi (>0.020), fokus pada peningkatan varian produk dan customer experience.</li>
+                    <li><strong>Monitoring Berkala:</strong> Lakukan analisis performa outlet secara berkala untuk menyesuaikan strategi berdasarkan perubahan demografis dan kompetisi.</li>
+                </ol>
+            `;
+        }
+        
+        function resetFilter() {
+            document.getElementById('province-filter').value = 'ALL';
+            filterByProvince();
+        }
+        
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+            
+            // Initialize charts when charts tab is opened
+            if (tabName === 'charts') {
+                setTimeout(initializeCharts, 100);
+            }
+        }
+        
+        function initializeCharts() {
+            if (currentData.length === 0) {
+                // Clear charts if no data
+                Object.values(currentCharts).forEach(chart => {
+                    if (chart) chart.destroy();
+                });
+                currentCharts = {};
+                return;
+            }
+            
+            // Destroy existing charts
+            Object.values(currentCharts).forEach(chart => {
+                if (chart) chart.destroy();
+            });
+            
+            // Outlet Chart
+            const outletCtx = document.getElementById('outletChart');
+            if (outletCtx) {
+                currentCharts.outlet = new Chart(outletCtx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: currentData.map(d => d.Kecamatan),
+                        datasets: [{
+                            label: 'Jumlah Outlet',
+                            data: currentData.map(d => d['Jumlah Outlet']),
+                            backgroundColor: '#FF6002',
+                            borderWidth: 2,
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            ...chartOptions.scales,
+                            y: {
+                                ...chartOptions.scales.y,
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Jumlah Outlet',
+                                    color: '#cccccc'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Density Chart
+            const densityCtx = document.getElementById('densityChart');
+            if (densityCtx) {
+                currentCharts.density = new Chart(densityCtx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: currentData.map(d => d.Kecamatan),
+                        datasets: [{
+                            label: 'Kepadatan Penduduk',
+                            data: currentData.map(d => d['Kepadatan Penduduk']),
+                            backgroundColor: '#FF6002',
+                            borderWidth: 2,
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            ...chartOptions.scales,
+                            y: {
+                                ...chartOptions.scales.y,
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Kepadatan (jiwa/km²)',
+                                    color: '#cccccc'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Ratio Chart
+            const ratioCtx = document.getElementById('ratioChart');
+            if (ratioCtx) {
+                currentCharts.ratio = new Chart(ratioCtx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: currentData.map(d => d.Kecamatan),
+                        datasets: [{
+                            label: 'Rasio Coverage',
+                            data: currentData.map(d => d['Rasio Outlet']),
+                            backgroundColor: 'rgba(206, 145, 120, 0.7)',
+                            borderColor: '#ce9178',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#ce9178',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointRadius: 6
+                        }]
+                    },
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            ...chartOptions.scales,
+                            y: {
+                                ...chartOptions.scales.y,
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Rasio Coverage',
+                                    color: '#cccccc'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Pie Chart
+            const pieCtx = document.getElementById('pieChart');
+            if (pieCtx) {
+                currentCharts.pie = new Chart(pieCtx.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: currentData.map(d => d.Kecamatan),
+                        datasets: [{
+                            data: currentData.map(d => d['Jumlah Outlet']),
+                            backgroundColor: [
+                                '#007acc', '#4ec9b0', '#ce9178', '#c586c0', 
+                                '#f44747', '#dcdcaa', '#569cd6', '#4fc1ff',
+                                '#b267e6', '#ff6b6b', '#4ecdc4', '#45b7d1'
+                            ],
+                            borderWidth: 2,
+                            borderColor: '#2d2d30'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    color: '#cccccc',
+                                    usePointStyle: true,
+                                    padding: 15
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Scatter Chart
+            const scatterCtx = document.getElementById('scatterChart');
+            if (scatterCtx) {
+                currentCharts.scatter = new Chart(scatterCtx.getContext('2d'), {
+                    type: 'scatter',
+                    data: {
+                        datasets: [{
+                            label: 'Kepadatan vs Outlet',
+                            data: currentData.map(d => ({
+                                x: d['Kepadatan Penduduk'],
+                                y: d['Jumlah Outlet']
+                            })),
+                            backgroundColor: '#FF6002',
+                            borderWidth: 2,
+                            pointRadius: 8,
+                            pointHoverRadius: 10
+                        }]
+                    },
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            x: {
+                                ...chartOptions.scales.x,
+                                title: {
+                                    display: true,
+                                    text: 'Kepadatan Penduduk (jiwa/km²)',
+                                    color: '#cccccc'
+                                }
+                            },
+                            y: {
+                                ...chartOptions.scales.y,
+                                title: {
+                                    display: true,
+                                    text: 'Jumlah Outlet',
+                                    color: '#cccccc'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+        
+        function updateCharts() {
+            if (document.querySelector('#charts.active')) {
+                initializeCharts();
+            }
+        }
+
+        // Add event listeners for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for better navigation
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

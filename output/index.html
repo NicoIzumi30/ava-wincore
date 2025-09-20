@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enhanced Dashboard Analisis Outlet - Multi Province + Indomaret + Kecamatan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        #header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .header-logo {
+            height: 50px;
+            border-radius: 5px;
+        }
+        
+        .header-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .province-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .province-selector select {
+            padding: 8px 15px;
+            border-radius: 6px;
+            border: 1px solid #bdc3c7;
+            background: white;
+            font-size: 14px;
+            font-weight: 500;
+            min-width: 200px;
+            cursor: pointer;
+        }
+        
+        .stats-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .stats-info > div {
+            background: #34495e;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+        
+        #content {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 80px);
+        }
+        
+        #map-container {
+            flex-grow: 1;
+            position: relative;
+        }
+        
+        #map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        #footer {
+            background-color: #34495e;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .quick-links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .quick-links a {
+            padding: 6px 12px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+        
+        .quick-links a:hover {
+            background: #2980b9;
+        }
+        
+        .quick-links a.index {
+            background: #27ae60;
+        }
+        
+        .quick-links a.index:hover {
+            background: #229954;
+        }
+        
+        .quick-links a.indomaret-report {
+            background: #1e88e5;
+        }
+        
+        .quick-links a.indomaret-report:hover {
+            background: #1976d2;
+        }
+        
+        .quick-links a.kecamatan-dashboard {
+            background: #9c27b0;
+        }
+        
+        .quick-links a.kecamatan-dashboard:hover {
+            background: #7b1fa2;
+        }
+        
+        /* Enhanced features indicator */
+        .enhanced-indicator {
+            background: linear-gradient(45deg, #FF6002, #ff8c42);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 5px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            #header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .province-selector select {
+                min-width: 150px;
+            }
+            
+            .quick-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>    
+    <div id="content">
+        <div id="map-container">
+            <iframe id="map-iframe" src="peta_outlet_full.html"></iframe>
+        </div>
+    </div>
+    
+    
+    <script>
+    function changeMap(filename) {
+        if (filename) {
+            document.getElementById('map-iframe').src = filename;
+        }
+    }
+    
+    // Auto-select based on URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedProvince = urlParams.get('province');
+    if (selectedProvince) {
+        const select = document.getElementById('province-select');
+        const option = select.querySelector(`option[value="${selectedProvince}"]`);
+        if (option) {
+            select.value = selectedProvince;
+            changeMap(selectedProvince);
+        }
+    }
+    </script>
+</body>
+</html>

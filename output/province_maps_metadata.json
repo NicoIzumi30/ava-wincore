@@ -1,0 +1,64 @@
+{
+  "generated_at": "2025-09-20T22:40:39.654046",
+  "navigation_style": "dropdown",
+  "provinces": {
+    "SUMBAGUT": {
+      "outlets_count": 31,
+      "facilities_count": 152,
+      "config": {
+        "bounds": [
+          [
+            6.084,
+            95.183
+          ],
+          [
+            -2.838,
+            104.72
+          ]
+        ],
+        "center": [
+          1.623,
+          99.951
+        ],
+        "zoom": 7,
+        "filename": "sumatera_utara"
+      },
+      "filename": "peta_outlet_sumatera_utara.html"
+    },
+    "JATIMBALIKAL": {
+      "outlets_count": 25,
+      "facilities_count": 84,
+      "config": {
+        "bounds": [
+          [
+            -1.0,
+            110.0
+          ],
+          [
+            -9.5,
+            119.5
+          ]
+        ],
+        "center": [
+          -5.6,
+          113.8
+        ],
+        "zoom": 6,
+        "filename": "jatimbalikal"
+      },
+      "filename": "peta_outlet_jatimbalikal.html"
+    }
+  },
+  "files": {
+    "full_map": "peta_outlet_full.html",
+    "province_maps": {
+      "JAKARTA": "peta_outlet_dki_jakarta.html",
+      "JAWA BARAT": "peta_outlet_jawa_barat.html",
+      "JAWA TENGAH": "peta_outlet_jawa_tengah.html",
+      "SUMBAGSEL": "peta_outlet_sumatera_selatan.html",
+      "SUMBAGUT": "peta_outlet_sumatera_utara.html",
+      "JATIMBALIKAL": "peta_outlet_jatimbalikal.html",
+      "SULTER": "peta_outlet_sulter.html"
+    }
+  }
+}

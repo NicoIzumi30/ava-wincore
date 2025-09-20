@@ -1,0 +1,1126 @@
+2025-07-27 02:53:09,055 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-27 02:53:09,055 - INFO - Available maps: 0 total, full: False, provinces: 0
+2025-07-27 02:53:09,055 - INFO - Maps tersedia: 0
+2025-07-27 02:53:09,056 - INFO - Multi-Province Web Server started on http://10.122.121.168:8080
+2025-07-27 02:53:09,057 - INFO - Available maps: 0 total, full: False, provinces: 0
+2025-07-27 02:53:48,755 - INFO - Available maps: 0 total, full: False, provinces: 0
+2025-07-27 02:53:48,755 - INFO - 127.0.0.1 - "GET / HTTP/1.1" 200 -
+2025-07-27 02:53:49,284 - INFO - Available maps: 0 total, full: False, provinces: 0
+2025-07-27 02:53:49,285 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-07-27 09:55:08,751 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-27 09:55:08,752 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-27 09:55:08,752 - INFO - Maps tersedia: 6
+2025-07-27 09:55:08,752 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-27 09:55:08,753 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-27 10:07:26,616 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-07-27 13:17:30,048 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-27 13:17:30,049 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-27 13:17:30,049 - INFO - Maps tersedia: 6
+2025-07-27 13:17:30,049 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-27 13:17:30,049 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-27 14:40:12,295 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-07-28 01:59:17,251 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-07-28 10:52:34,608 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-28 10:52:34,610 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-28 10:52:34,610 - INFO - Maps tersedia: 6
+2025-07-28 10:52:34,610 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-28 10:52:34,611 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-28 21:12:32,414 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-28 21:12:32,416 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-28 21:12:32,416 - INFO - Maps tersedia: 6
+2025-07-28 21:12:32,416 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-28 21:12:32,416 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-29 03:28:45,325 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-29 03:28:45,326 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-29 03:28:45,326 - INFO - Maps tersedia: 6
+2025-07-29 03:28:45,327 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-29 03:28:45,327 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-29 08:26:29,204 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-29 08:26:29,205 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-29 08:26:29,205 - INFO - Maps tersedia: 6
+2025-07-29 08:26:29,205 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-29 08:26:29,206 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-29 13:43:50,997 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-29 13:43:50,999 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-29 13:43:50,999 - INFO - Maps tersedia: 6
+2025-07-29 13:43:50,999 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-29 13:43:50,999 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 00:12:04,806 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-30 00:12:04,807 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 00:12:04,807 - INFO - Maps tersedia: 6
+2025-07-30 00:12:04,808 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-30 00:12:04,808 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 07:51:46,816 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-30 07:51:46,817 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 07:51:46,817 - INFO - Maps tersedia: 6
+2025-07-30 07:51:46,818 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-30 07:51:46,818 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 15:02:12,979 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-30 15:02:12,981 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 15:02:12,981 - INFO - Maps tersedia: 6
+2025-07-30 15:02:12,981 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-30 15:02:12,981 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 22:53:37,919 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-30 22:53:37,922 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-30 22:53:37,922 - INFO - Maps tersedia: 6
+2025-07-30 22:53:37,923 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-30 22:53:37,923 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-31 15:19:05,929 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-31 15:19:05,930 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-31 15:19:05,930 - INFO - Maps tersedia: 6
+2025-07-31 15:19:05,930 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-31 15:19:05,930 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-31 16:30:11,512 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-07-31 19:07:03,008 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-07-31 19:07:03,010 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-07-31 19:07:03,010 - INFO - Maps tersedia: 6
+2025-07-31 19:07:03,010 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-07-31 19:07:03,010 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 00:17:28,039 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-01 00:17:28,040 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 00:17:28,040 - INFO - Maps tersedia: 6
+2025-08-01 00:17:28,040 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-01 00:17:28,040 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 01:00:03,609 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-01 01:00:03,610 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 01:00:03,610 - INFO - Maps tersedia: 6
+2025-08-01 01:00:03,610 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-01 01:00:03,610 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 13:59:02,047 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-01 13:59:02,049 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 13:59:02,049 - INFO - Maps tersedia: 6
+2025-08-01 13:59:02,049 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-01 13:59:02,050 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 16:21:55,054 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-01 16:21:55,056 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-01 16:21:55,056 - INFO - Maps tersedia: 6
+2025-08-01 16:21:55,057 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-01 16:21:55,057 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-02 15:16:15,575 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-02 15:16:15,577 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-02 15:16:15,577 - INFO - Maps tersedia: 6
+2025-08-02 15:16:15,577 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-02 15:16:15,578 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-02 20:26:06,991 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-02 20:26:06,993 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-02 20:26:06,993 - INFO - Maps tersedia: 6
+2025-08-02 20:26:06,993 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-02 20:26:06,993 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-02 20:39:57,990 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 304 -
+2025-08-02 21:31:09,953 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-02 21:31:09,955 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-02 21:31:09,955 - INFO - Maps tersedia: 6
+2025-08-02 21:31:09,955 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-02 21:31:09,955 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 00:08:45,405 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-03 00:08:45,406 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 00:08:45,406 - INFO - Maps tersedia: 6
+2025-08-03 00:08:45,407 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-03 00:08:45,407 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 03:07:50,649 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-03 03:07:50,650 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 03:07:50,650 - INFO - Maps tersedia: 6
+2025-08-03 03:07:50,650 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-03 03:07:50,650 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 08:41:45,689 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-03 08:41:45,690 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 08:41:45,690 - INFO - Maps tersedia: 6
+2025-08-03 08:41:45,691 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-03 08:41:45,691 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 16:46:35,621 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-03 16:46:35,622 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-03 16:46:35,622 - INFO - Maps tersedia: 6
+2025-08-03 16:46:35,622 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-03 16:46:35,622 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-05 14:52:05,988 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-05 14:52:05,989 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-05 14:52:05,989 - INFO - Maps tersedia: 6
+2025-08-05 14:52:05,990 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-05 14:52:05,990 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-05 19:50:55,036 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-05 19:50:55,038 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-05 19:50:55,038 - INFO - Maps tersedia: 6
+2025-08-05 19:50:55,039 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-05 19:50:55,039 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-06 20:53:25,923 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-06 20:53:25,924 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-06 20:53:25,925 - INFO - Maps tersedia: 6
+2025-08-06 20:53:25,925 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-06 20:53:25,925 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-06 23:59:35,975 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-06 23:59:35,976 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-06 23:59:35,976 - INFO - Maps tersedia: 6
+2025-08-06 23:59:35,976 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-06 23:59:35,976 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-07 08:46:20,640 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:20,641 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:20,641 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:20,641 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,032 - INFO - 127.0.0.1 - "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" 200 -
+2025-08-07 08:46:21,065 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,065 - INFO - 127.0.0.1 - "CONNECT merino.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,066 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,066 - INFO - 127.0.0.1 - "CONNECT ads.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,069 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,070 - INFO - 127.0.0.1 - "CONNECT merino.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,074 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,074 - INFO - 127.0.0.1 - "CONNECT merino.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,183 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,183 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,207 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,207 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,297 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,297 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,299 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,299 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,300 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,300 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,634 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,634 - INFO - 127.0.0.1 - "CONNECT safebrowsing.googleapis.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,720 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,720 - INFO - 127.0.0.1 - "CONNECT push.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,744 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,744 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,876 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,876 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,876 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,876 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,878 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,878 - INFO - 127.0.0.1 - "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,881 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,881 - INFO - 127.0.0.1 - "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:21,919 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:21,919 - INFO - 127.0.0.1 - "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:22,026 - INFO - 127.0.0.1 - "GET http://detectportal.firefox.com/success.txt?ipv6 HTTP/1.1" 200 -
+2025-08-07 08:46:22,026 - INFO - 127.0.0.1 - "GET http://detectportal.firefox.com/success.txt?ipv4 HTTP/1.1" 200 -
+2025-08-07 08:46:22,043 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:22,044 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:22,044 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:22,044 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:22,044 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:22,044 - INFO - 127.0.0.1 - "CONNECT firefox-settings-attachments.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:24,248 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:24,248 - INFO - 127.0.0.1 - "CONNECT extensions.gnome.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:25,830 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:25,830 - INFO - 127.0.0.1 - "CONNECT extensions.gnome.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:26,728 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:26,728 - INFO - 127.0.0.1 - "CONNECT push.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:36,768 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:36,768 - INFO - 127.0.0.1 - "CONNECT push.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,326 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,326 - INFO - 127.0.0.1 - "CONNECT normandy.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,332 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,332 - INFO - 127.0.0.1 - "CONNECT services.addons.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,337 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,337 - INFO - 127.0.0.1 - "CONNECT versioncheck-bg.addons.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,338 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,338 - INFO - 127.0.0.1 - "CONNECT versioncheck-bg.addons.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,342 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,342 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,353 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,353 - INFO - 127.0.0.1 - "CONNECT aus5.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,353 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,353 - INFO - 127.0.0.1 - "CONNECT aus5.mozilla.org:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,355 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,355 - INFO - 127.0.0.1 - "CONNECT location.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:50,643 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:50,643 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:51,301 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:51,302 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:51,454 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:51,454 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:51,614 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:51,614 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:51,690 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:51,690 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:51,806 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:51,806 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:51,905 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:51,905 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:51,979 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:51,979 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,050 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,050 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,162 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,162 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,226 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,226 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,278 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,278 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,341 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,341 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,420 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,420 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,496 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,496 - INFO - 127.0.0.1 - "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" 501 -
+2025-08-07 08:46:52,580 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-07 08:46:52,580 - INFO - 127.0.0.1 - "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" 501 -
+2025-08-07 12:40:27,966 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-07 12:40:27,968 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-07 12:40:27,968 - INFO - Maps tersedia: 6
+2025-08-07 12:40:27,968 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-07 12:40:27,968 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-07 17:45:07,338 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-07 17:45:07,340 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-07 17:45:07,340 - INFO - Maps tersedia: 6
+2025-08-07 17:45:07,340 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-07 17:45:07,340 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-08 18:46:32,399 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 304 -
+2025-08-09 11:53:27,383 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-09 11:53:27,384 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-09 11:53:27,384 - INFO - Maps tersedia: 6
+2025-08-09 11:53:27,385 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-09 11:53:27,385 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-09 13:05:52,158 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-09 13:05:52,160 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-09 13:05:52,160 - INFO - Maps tersedia: 6
+2025-08-09 13:05:52,161 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-09 13:05:52,161 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-10 00:30:10,763 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-10 00:30:10,766 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-10 00:30:10,767 - INFO - Maps tersedia: 6
+2025-08-10 00:30:10,767 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-10 00:30:10,767 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-10 13:13:58,008 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-10 13:13:58,009 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-10 13:13:58,009 - INFO - Maps tersedia: 6
+2025-08-10 13:13:58,010 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-10 13:13:58,010 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-10 14:00:17,431 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 304 -
+2025-08-11 18:08:52,983 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-11 18:08:52,985 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-11 18:08:52,985 - INFO - Maps tersedia: 6
+2025-08-11 18:08:52,985 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-11 18:08:52,986 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-11 19:34:40,969 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-11 19:34:40,971 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-11 19:34:40,971 - INFO - Maps tersedia: 6
+2025-08-11 19:34:40,971 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-11 19:34:40,971 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-11 23:18:30,949 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-11 23:18:30,951 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-11 23:18:30,951 - INFO - Maps tersedia: 6
+2025-08-11 23:18:30,951 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-11 23:18:30,951 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-12 23:13:16,819 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-12 23:13:16,821 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-12 23:13:16,821 - INFO - Maps tersedia: 6
+2025-08-12 23:13:16,822 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-12 23:13:16,822 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-13 16:56:36,748 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-13 16:56:36,750 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-13 16:56:36,750 - INFO - Maps tersedia: 6
+2025-08-13 16:56:36,750 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-13 16:56:36,751 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-15 21:38:30,609 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-15 21:38:30,611 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-15 21:38:30,611 - INFO - Maps tersedia: 6
+2025-08-15 21:38:30,611 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-15 21:38:30,611 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-16 00:53:03,030 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-16 00:53:03,032 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-16 00:53:03,032 - INFO - Maps tersedia: 6
+2025-08-16 00:53:03,032 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-16 00:53:03,032 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-17 17:26:02,043 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-17 17:26:02,045 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-17 17:26:02,045 - INFO - Maps tersedia: 6
+2025-08-17 17:26:02,045 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-17 17:26:02,045 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-17 22:31:22,881 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-17 22:31:22,883 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-17 22:31:22,883 - INFO - Maps tersedia: 6
+2025-08-17 22:31:22,883 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-17 22:31:22,883 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-18 06:51:07,821 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-18 06:51:07,823 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-18 06:51:07,823 - INFO - Maps tersedia: 6
+2025-08-18 06:51:07,823 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-18 06:51:07,823 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-18 11:12:15,086 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-18 11:12:15,087 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-18 11:12:15,087 - INFO - Maps tersedia: 6
+2025-08-18 11:12:15,088 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-18 11:12:15,088 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-18 14:58:08,682 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-18 14:58:08,685 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-18 14:58:08,685 - INFO - Maps tersedia: 6
+2025-08-18 14:58:08,685 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-18 14:58:08,686 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 00:25:03,786 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-19 00:25:03,788 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 00:25:03,788 - INFO - Maps tersedia: 6
+2025-08-19 00:25:03,789 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-19 00:25:03,789 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 08:52:39,035 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-19 08:52:39,036 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 08:52:39,036 - INFO - Maps tersedia: 6
+2025-08-19 08:52:39,037 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-19 08:52:39,037 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 19:38:12,000 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-19 19:38:12,001 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 19:38:12,001 - INFO - Maps tersedia: 6
+2025-08-19 19:38:12,002 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-19 19:38:12,002 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 19:44:22,914 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-19 19:44:22,917 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 19:44:22,917 - INFO - Maps tersedia: 6
+2025-08-19 19:44:22,917 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-19 19:44:22,917 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 20:05:40,146 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-19 20:05:40,147 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 20:05:40,147 - INFO - Maps tersedia: 6
+2025-08-19 20:05:40,147 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-19 20:05:40,147 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 21:36:43,950 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-19 21:36:43,952 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-19 21:36:43,952 - INFO - Maps tersedia: 6
+2025-08-19 21:36:43,952 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-19 21:36:43,952 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 01:25:35,999 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-20 01:25:36,001 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 01:25:36,001 - INFO - Maps tersedia: 6
+2025-08-20 01:25:36,002 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-20 01:25:36,002 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 13:43:22,010 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-20 13:43:22,013 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 13:43:22,013 - INFO - Maps tersedia: 6
+2025-08-20 13:43:22,013 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-20 13:43:22,013 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 15:07:12,979 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-20 15:07:12,981 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 15:07:12,981 - INFO - Maps tersedia: 6
+2025-08-20 15:07:12,981 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-20 15:07:12,981 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 15:46:42,146 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-20 15:46:42,149 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-20 15:46:42,149 - INFO - Maps tersedia: 6
+2025-08-20 15:46:42,149 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-20 15:46:42,149 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-21 08:45:26,858 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-21 08:45:26,860 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-21 08:45:26,860 - INFO - Maps tersedia: 6
+2025-08-21 08:45:26,861 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-21 08:45:26,861 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-21 18:47:13,605 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-21 18:47:13,607 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-21 18:47:13,607 - INFO - Maps tersedia: 6
+2025-08-21 18:47:13,607 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-21 18:47:13,607 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-21 22:54:27,069 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-21 22:54:27,071 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-21 22:54:27,071 - INFO - Maps tersedia: 6
+2025-08-21 22:54:27,071 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-21 22:54:27,072 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-22 10:34:15,721 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-22 10:34:15,722 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-22 10:34:15,722 - INFO - Maps tersedia: 6
+2025-08-22 10:34:15,723 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-22 10:34:15,723 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-22 18:40:29,215 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-22 18:40:29,216 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-22 18:40:29,216 - INFO - Maps tersedia: 6
+2025-08-22 18:40:29,217 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-22 18:40:29,217 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-23 00:17:43,040 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-23 00:17:43,042 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-23 00:17:43,042 - INFO - Maps tersedia: 6
+2025-08-23 00:17:43,042 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-23 00:17:43,043 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-23 07:15:57,096 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-23 07:15:57,099 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-23 07:15:57,099 - INFO - Maps tersedia: 6
+2025-08-23 07:15:57,099 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-23 07:15:57,099 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-23 22:11:00,777 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-23 22:11:00,779 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-23 22:11:00,779 - INFO - Maps tersedia: 6
+2025-08-23 22:11:00,779 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-23 22:11:00,779 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-24 10:41:32,543 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-24 10:41:32,544 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-24 10:41:32,545 - INFO - Maps tersedia: 6
+2025-08-24 10:41:32,545 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-24 10:41:32,545 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-24 21:09:23,776 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-24 21:09:23,778 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-24 21:09:23,778 - INFO - Maps tersedia: 6
+2025-08-24 21:09:23,779 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-24 21:09:23,779 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 00:41:21,580 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-25 00:41:21,582 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 00:41:21,582 - INFO - Maps tersedia: 6
+2025-08-25 00:41:21,582 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-25 00:41:21,582 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 12:19:30,883 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-25 12:19:30,884 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 12:19:30,884 - INFO - Maps tersedia: 6
+2025-08-25 12:19:30,884 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-25 12:19:30,885 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 17:39:22,113 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-25 17:39:22,115 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 17:39:22,115 - INFO - Maps tersedia: 6
+2025-08-25 17:39:22,115 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-25 17:39:22,115 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 21:01:52,771 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-25 21:01:52,773 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-25 21:01:52,773 - INFO - Maps tersedia: 6
+2025-08-25 21:01:52,774 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-25 21:01:52,774 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 03:15:05,417 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-26 03:15:05,419 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 03:15:05,419 - INFO - Maps tersedia: 6
+2025-08-26 03:15:05,419 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-26 03:15:05,419 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 14:22:04,224 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-26 14:22:04,226 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 14:22:04,226 - INFO - Maps tersedia: 6
+2025-08-26 14:22:04,226 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-26 14:22:04,227 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 18:44:37,967 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-26 18:44:37,969 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 18:44:37,969 - INFO - Maps tersedia: 6
+2025-08-26 18:44:37,969 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-26 18:44:37,969 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 21:26:55,059 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-26 21:26:55,061 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-26 21:26:55,061 - INFO - Maps tersedia: 6
+2025-08-26 21:26:55,061 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-26 21:26:55,061 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-27 00:18:06,112 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-27 00:18:06,113 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-27 00:18:06,114 - INFO - Maps tersedia: 6
+2025-08-27 00:18:06,114 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-27 00:18:06,114 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-27 01:56:11,803 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-27 01:56:11,805 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-27 01:56:11,805 - INFO - Maps tersedia: 6
+2025-08-27 01:56:11,805 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-27 01:56:11,805 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-27 23:34:32,294 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-27 23:34:32,296 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-27 23:34:32,297 - INFO - Maps tersedia: 6
+2025-08-27 23:34:32,297 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-27 23:34:32,297 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-28 11:54:09,129 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-28 11:54:09,131 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-28 11:54:09,131 - INFO - Maps tersedia: 6
+2025-08-28 11:54:09,131 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-28 11:54:09,132 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-29 16:04:18,645 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-29 16:04:18,647 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-29 16:04:18,647 - INFO - Maps tersedia: 6
+2025-08-29 16:04:18,648 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-29 16:04:18,648 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-30 16:50:00,293 - INFO - 127.0.0.1 - code 501, message Unsupported method ('POST')
+2025-08-30 16:50:00,300 - INFO - 127.0.0.1 - "POST http://172.188.217.103:9037/report/ HTTP/1.1" 501 -
+2025-08-30 16:50:07,598 - INFO - 127.0.0.1 - code 501, message Unsupported method ('POST')
+2025-08-30 16:50:07,598 - INFO - 127.0.0.1 - "POST http://172.188.217.103:9037/report/ HTTP/1.1" 501 -
+2025-08-30 16:50:08,661 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/ HTTP/1.1" 200 -
+2025-08-30 16:50:08,717 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,717 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,728 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-30 16:50:08,728 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/peta_outlet_full.html HTTP/1.1" 200 -
+2025-08-30 16:50:08,755 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,757 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,758 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,758 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,760 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,760 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,761 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,770 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,770 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,772 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,772 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,773 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,773 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,774 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,774 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,775 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,776 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,777 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,778 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,779 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,780 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,781 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,783 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,782 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,782 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,781 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,784 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,786 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,787 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,787 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:08,798 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:08,798 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,048 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,048 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,050 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,050 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,056 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,056 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,062 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,062 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,062 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,062 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,063 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,065 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,065 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,066 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,067 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,068 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,068 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,068 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,075 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,075 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,079 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,079 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,081 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,081 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,085 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,085 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,086 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,086 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,090 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:09,090 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:09,301 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/logo.png HTTP/1.1" 200 -
+2025-08-30 16:50:12,400 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:12,401 - INFO - 127.0.0.1 - "CONNECT www.google.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,339 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,339 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,370 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,370 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,371 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,371 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,372 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,372 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,374 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,374 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,374 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,375 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,375 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,376 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,377 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,377 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,378 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,379 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,379 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,380 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,380 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,381 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,382 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,382 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,383 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,383 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,388 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,388 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,389 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,389 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,391 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,391 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,393 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,393 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,408 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,408 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,414 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,414 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,423 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,423 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,428 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,428 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,430 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,430 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,430 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,430 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,431 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,431 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,434 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,434 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,435 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,435 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,439 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,439 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,443 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,443 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,444 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,444 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,454 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,454 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,455 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,455 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,459 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:13,459 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:13,464 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/logo.png HTTP/1.1" 200 -
+2025-08-30 16:50:14,365 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:14,365 - INFO - 127.0.0.1 - "CONNECT www.google.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,119 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,119 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,212 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,212 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,213 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,214 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,215 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,215 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,216 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,216 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,219 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,219 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,220 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,221 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,221 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,222 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,224 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,224 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,228 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,229 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,230 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,230 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,234 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,235 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,236 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,236 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,237 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,238 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,240 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,240 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,243 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,243 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,243 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,243 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,249 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,250 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,261 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,262 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,278 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,278 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,279 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,279 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,281 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,281 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,283 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,283 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,284 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,284 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,286 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,286 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,291 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,291 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,295 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,295 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,296 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,296 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,300 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,300 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,301 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,301 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,311 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,311 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:15,316 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/logo.png HTTP/1.1" 200 -
+2025-08-30 16:50:15,969 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:15,969 - INFO - 127.0.0.1 - "CONNECT www.google.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,839 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,839 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,869 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,870 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,871 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,871 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,871 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,872 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,872 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,873 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,874 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,874 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,874 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,877 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,878 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,879 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,880 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,880 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,881 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,881 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,881 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,882 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,884 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,884 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,886 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,887 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,887 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,888 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,888 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,888 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,893 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,893 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,895 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,895 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,905 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,905 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,911 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,911 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,918 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,918 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,919 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,919 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,920 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,921 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,921 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,922 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,922 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,922 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,924 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,924 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,939 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,940 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,945 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,945 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,946 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,946 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,950 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,950 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,950 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,951 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,954 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:19,955 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:19,960 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/logo.png HTTP/1.1" 200 -
+2025-08-30 16:50:36,858 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/ HTTP/1.1" 200 -
+2025-08-30 16:50:36,878 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,878 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,879 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-30 16:50:36,879 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/peta_outlet_full.html HTTP/1.1" 200 -
+2025-08-30 16:50:36,889 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/favicon.ico HTTP/1.1" 200 -
+2025-08-30 16:50:36,910 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,910 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,911 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,911 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,912 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,913 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,914 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,914 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,915 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,915 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,916 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,916 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,917 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,918 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,919 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,919 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,921 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,922 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,922 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,922 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,926 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,927 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,927 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,927 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,933 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,933 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,937 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,937 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,938 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,939 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,940 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,941 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,942 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/logo.png HTTP/1.1" 200 -
+2025-08-30 16:50:36,951 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,952 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,965 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,966 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,977 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,977 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,978 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,978 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,979 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,980 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,981 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,982 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,983 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,983 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,984 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,984 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:36,995 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:36,995 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,005 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,005 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,006 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,006 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,015 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,016 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,016 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,017 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,023 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,024 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,825 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/ HTTP/1.1" 200 -
+2025-08-30 16:50:37,844 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,844 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,845 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-30 16:50:37,845 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/peta_outlet_full.html HTTP/1.1" 200 -
+2025-08-30 16:50:37,855 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/favicon.ico HTTP/1.1" 200 -
+2025-08-30 16:50:37,881 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,881 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,882 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,882 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,883 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,883 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,885 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,886 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,887 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,887 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,888 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,889 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,890 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,891 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,892 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,892 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,895 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,895 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,898 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,898 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,901 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,901 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,902 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,903 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,906 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,906 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,907 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,908 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,909 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,909 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,910 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,910 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,911 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/logo.png HTTP/1.1" 200 -
+2025-08-30 16:50:37,926 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,926 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,936 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,937 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,943 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,943 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,944 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,945 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,947 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,948 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,950 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,951 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,952 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,952 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,953 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,953 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,963 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,963 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,971 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,971 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,972 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,972 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,978 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,978 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,979 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,979 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:37,986 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:37,986 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,551 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/ HTTP/1.1" 200 -
+2025-08-30 16:50:38,571 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,571 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,573 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-30 16:50:38,573 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/report/peta_outlet_full.html HTTP/1.1" 200 -
+2025-08-30 16:50:38,586 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/favicon.ico HTTP/1.1" 200 -
+2025-08-30 16:50:38,611 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,612 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,613 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,613 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,614 - INFO - 127.0.0.1 - "CONNECT code.jquery.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,615 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,615 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,616 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,617 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,617 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,618 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,619 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,620 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,621 - INFO - 127.0.0.1 - "CONNECT netdna.bootstrapcdn.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,621 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,622 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,623 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,624 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,624 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,625 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,625 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,626 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,627 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,629 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,629 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,630 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,630 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,631 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,631 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,632 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,634 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,634 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,638 - INFO - 127.0.0.1 - "GET http://172.188.217.103:9037/logo.png HTTP/1.1" 200 -
+2025-08-30 16:50:38,647 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,647 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,654 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,654 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,663 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,663 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,664 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,664 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,669 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,670 - INFO - 127.0.0.1 - "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,673 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,673 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 16:50:38,681 - INFO - 127.0.0.1 - code 501, message Unsupported method ('CONNECT')
+2025-08-30 16:50:38,681 - INFO - 127.0.0.1 - "CONNECT cdnjs.cloudflare.com:443 HTTP/1.1" 501 -
+2025-08-30 19:36:35,577 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-08-30 19:36:35,580 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-08-30 19:36:35,581 - INFO - Maps tersedia: 6
+2025-08-30 19:36:35,581 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-08-30 19:36:35,581 - INFO - Available maps: 6 total, full: True, provinces: 5
+2025-09-01 10:59:17,012 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-09-01 10:59:17,013 - INFO - Available maps: 0 total, full: False, provinces: 0
+2025-09-01 10:59:17,013 - INFO - Maps tersedia: 0
+2025-09-01 10:59:17,013 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-09-01 10:59:17,013 - INFO - Available maps: 0 total, full: False, provinces: 0
+2025-09-02 19:12:42,093 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-09-02 19:12:42,095 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-02 19:12:42,095 - INFO - Maps tersedia: 4
+2025-09-02 19:12:42,095 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-09-02 19:12:42,095 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-02 23:46:30,656 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-09-02 23:46:30,658 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-02 23:46:30,658 - INFO - Maps tersedia: 4
+2025-09-02 23:46:30,658 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-09-02 23:46:30,658 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 11:27:02,122 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-09-03 11:27:02,125 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 11:27:02,125 - INFO - Maps tersedia: 4
+2025-09-03 11:27:02,126 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-09-03 11:27:02,126 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 12:45:10,119 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-09-03 12:45:10,121 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 12:45:10,122 - INFO - Maps tersedia: 4
+2025-09-03 12:45:10,122 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-09-03 12:45:10,122 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 14:19:51,088 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps/output
+2025-09-03 14:19:51,091 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 14:19:51,091 - INFO - Maps tersedia: 4
+2025-09-03 14:19:51,091 - INFO - Multi-Province Web Server started on http://127.0.0.1:8080
+2025-09-03 14:19:51,091 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 14:32:03,761 - INFO - 127.0.0.1 - code 404, message API endpoint not found: api/provinces
+2025-09-03 14:32:03,761 - INFO - 127.0.0.1 - "GET /api/provinces HTTP/1.1" 404 -
+2025-09-03 14:32:53,609 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 14:32:53,609 - INFO - 127.0.0.1 - "GET /api/status HTTP/1.1" 200 -
+2025-09-03 14:32:53,613 - INFO - 127.0.0.1 - code 404, message API endpoint not found: api/provinces
+2025-09-03 14:32:53,613 - INFO - 127.0.0.1 - "GET /api/provinces HTTP/1.1" 404 -
+2025-09-03 14:32:53,618 - INFO - 127.0.0.1 - code 404, message API endpoint not found: api/statistics
+2025-09-03 14:32:53,618 - INFO - 127.0.0.1 - "GET /api/statistics HTTP/1.1" 404 -
+2025-09-03 14:32:53,623 - INFO - 127.0.0.1 - code 404, message API endpoint not found: api/data/dki_jakarta_sample
+2025-09-03 14:32:53,623 - INFO - 127.0.0.1 - "GET /api/data/dki_jakarta_sample?page=1&per_page=10 HTTP/1.1" 404 -
+2025-09-03 14:32:53,628 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 14:32:53,634 - INFO - 127.0.0.1 - "GET /peta_outlet_dki_jakarta_sample_api.html HTTP/1.1" 200 -
+2025-09-03 14:34:01,098 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 14:34:01,098 - INFO - 127.0.0.1 - "GET /api/status HTTP/1.1" 200 -
+2025-09-03 14:34:01,106 - INFO - 127.0.0.1 - code 404, message API endpoint not found: api/provinces
+2025-09-03 14:34:01,106 - INFO - 127.0.0.1 - "GET /api/provinces HTTP/1.1" 404 -
+2025-09-03 14:34:01,111 - INFO - 127.0.0.1 - code 404, message API endpoint not found: api/statistics
+2025-09-03 14:34:01,111 - INFO - 127.0.0.1 - "GET /api/statistics HTTP/1.1" 404 -
+2025-09-03 14:34:01,116 - INFO - 127.0.0.1 - code 404, message API endpoint not found: api/data/dki_jakarta_sample
+2025-09-03 14:34:01,116 - INFO - 127.0.0.1 - "GET /api/data/dki_jakarta_sample?page=1&per_page=10 HTTP/1.1" 404 -
+2025-09-03 14:34:01,121 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 14:34:01,121 - INFO - 127.0.0.1 - "GET /peta_outlet_dki_jakarta_sample_api.html HTTP/1.1" 200 -
+2025-09-03 17:03:30,007 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps (Copy 2)/output
+2025-09-03 17:03:30,008 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 17:03:30,008 - INFO - Maps tersedia: 4
+2025-09-03 17:03:30,009 - WARNING - Port 8080 sudah digunakan, menggunakan port 8082
+2025-09-03 17:03:30,009 - INFO - Multi-Province Web Server started on http://10.223.113.168:8082
+2025-09-03 17:03:30,009 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 17:03:44,117 - INFO - 127.0.0.1 - "GET / HTTP/1.1" 200 -
+2025-09-03 17:03:44,175 - INFO - 127.0.0.1 - "GET /peta_outlet_full.html HTTP/1.1" 200 -
+2025-09-03 17:03:44,234 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-03 17:03:48,591 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-09-03 17:09:46,638 - INFO - 127.0.0.1 - "GET / HTTP/1.1" 304 -
+2025-09-03 17:09:46,861 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-03 17:27:45,296 - INFO - Server dihentikan oleh user.
+2025-09-03 17:32:29,566 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps (Copy 2)/output
+2025-09-03 17:32:29,566 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 17:32:29,566 - INFO - Maps tersedia: 4
+2025-09-03 17:32:29,567 - WARNING - Port 8080 sudah digunakan, menggunakan port 8082
+2025-09-03 17:32:29,567 - INFO - Multi-Province Web Server started on http://10.223.113.168:8082
+2025-09-03 17:32:29,567 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-03 17:32:34,319 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-03 17:33:22,094 - INFO - 127.0.0.1 - "GET /peta_outlet_dki_jakarta.html HTTP/1.1" 200 -
+2025-09-03 17:33:22,325 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-03 17:33:22,656 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-03 17:33:36,148 - INFO - 127.0.0.1 - "GET /peta_outlet_sumatera_selatan.html HTTP/1.1" 200 -
+2025-09-03 17:33:36,246 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-03 17:33:39,850 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-03 17:33:45,415 - INFO - 127.0.0.1 - "GET /peta_outlet_jawa_barat.html HTTP/1.1" 200 -
+2025-09-03 17:33:45,494 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:25:45,220 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps (Copy 3)/output
+2025-09-04 09:25:45,220 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:25:45,221 - INFO - Maps tersedia: 4
+2025-09-04 09:25:45,221 - WARNING - Port 8080 sudah digunakan, menggunakan port 8081
+2025-09-04 09:25:45,221 - INFO - Multi-Province Web Server started on http://192.168.1.10:8081
+2025-09-04 09:25:45,222 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:25:58,815 - INFO - 127.0.0.1 - "GET / HTTP/1.1" 200 -
+2025-09-04 09:25:58,877 - INFO - 127.0.0.1 - "GET /peta_outlet_full.html HTTP/1.1" 200 -
+2025-09-04 09:25:58,918 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:26:12,924 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-09-04 09:26:41,844 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:26:41,844 - INFO - 127.0.0.1 - "GET /peta_outlet_jawa_tengah.html HTTP/1.1" 200 -
+2025-09-04 09:26:41,889 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:26:46,656 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:26:46,656 - INFO - 127.0.0.1 - "GET /peta_outlet_sumatera_utara.html HTTP/1.1" 200 -
+2025-09-04 09:26:46,662 - ERROR - Error saat menangani permintaan: [Errno 104] Connection reset by peer
+2025-09-04 09:26:46,662 - INFO - 127.0.0.1 - code 500, message Internal server error: [Errno 104] Connection reset by peer
+2025-09-04 09:26:46,662 - INFO - 127.0.0.1 - "GET /peta_outlet_jawa_tengah.html HTTP/1.1" 500 -
+2025-09-04 09:26:46,691 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:26:49,969 - INFO - 127.0.0.1 - "GET /peta_outlet_jawa_barat.html HTTP/1.1" 200 -
+2025-09-04 09:26:50,176 - ERROR - Error saat menangani permintaan: [Errno 104] Connection reset by peer
+2025-09-04 09:26:50,176 - INFO - 127.0.0.1 - code 500, message Internal server error: [Errno 104] Connection reset by peer
+2025-09-04 09:26:50,176 - INFO - 127.0.0.1 - "GET /peta_outlet_sumatera_utara.html HTTP/1.1" 500 -
+2025-09-04 09:26:50,205 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:26:56,483 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:26:56,483 - INFO - 127.0.0.1 - "GET /peta_outlet_jawa_tengah.html HTTP/1.1" 200 -
+2025-09-04 09:26:56,517 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:27:00,095 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:27:37,261 - INFO - 127.0.0.1 - "GET /peta_outlet_sumatera_selatan.html HTTP/1.1" 200 -
+2025-09-04 09:27:37,315 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:27:41,896 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:28:14,798 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:28:19,571 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:28:19,572 - INFO - 127.0.0.1 - "GET /peta_outlet_sumatera_utara.html HTTP/1.1" 200 -
+2025-09-04 09:28:19,668 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:29:05,690 - INFO - 127.0.0.1 - "GET /dashboard HTTP/1.1" 200 -
+2025-09-04 09:29:05,724 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:29:14,341 - INFO - Server dihentikan oleh user.
+2025-09-04 09:35:44,618 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps (Copy 3)/output
+2025-09-04 09:35:44,618 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:35:44,618 - INFO - Maps tersedia: 4
+2025-09-04 09:35:44,619 - WARNING - Port 8080 sudah digunakan, menggunakan port 8081
+2025-09-04 09:35:44,619 - INFO - Multi-Province Web Server started on http://192.168.1.10:8081
+2025-09-04 09:35:44,620 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:35:47,520 - INFO - 127.0.0.1 - "GET / HTTP/1.1" 304 -
+2025-09-04 09:35:47,570 - INFO - 127.0.0.1 - "GET /peta_outlet_full.html HTTP/1.1" 200 -
+2025-09-04 09:35:47,605 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:36:00,333 - INFO - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 304 -
+2025-09-04 09:36:05,202 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:36:09,027 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:36:09,027 - INFO - 127.0.0.1 - "GET /peta_outlet_sumatera_utara.html HTTP/1.1" 304 -
+2025-09-04 09:36:09,060 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:36:14,678 - INFO - 127.0.0.1 - "GET /peta_outlet_jawa_barat.html HTTP/1.1" 304 -
+2025-09-04 09:36:14,710 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:36:21,988 - INFO - 127.0.0.1 - "GET /peta_outlet_dki_jakarta.html HTTP/1.1" 200 -
+2025-09-04 09:36:22,019 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:36:30,774 - INFO - 127.0.0.1 - "GET /dashboard HTTP/1.1" 200 -
+2025-09-04 09:36:30,802 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:38:38,047 - INFO - 192.168.1.10 - "GET /peta_outlet_jawa_barat.html HTTP/1.1" 200 -
+2025-09-04 09:38:38,079 - INFO - 192.168.1.10 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:38:39,644 - INFO - Server dihentikan oleh user.
+2025-09-04 09:39:02,177 - INFO - Direktori output dibuat/diperiksa: /home/yuki-x2/project/outlet-maps (Copy 3)/output
+2025-09-04 09:39:02,177 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:39:02,177 - INFO - Maps tersedia: 4
+2025-09-04 09:39:02,178 - WARNING - Port 8080 sudah digunakan, menggunakan port 8081
+2025-09-04 09:39:02,178 - INFO - Multi-Province Web Server started on http://192.168.1.10:8081
+2025-09-04 09:39:02,179 - INFO - Available maps: 4 total, full: True, provinces: 3
+2025-09-04 09:39:11,792 - INFO - 127.0.0.1 - "GET / HTTP/1.1" 304 -
+2025-09-04 09:39:11,843 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -
+2025-09-04 09:39:14,568 - INFO - 127.0.0.1 - "GET /dashboard HTTP/1.1" 200 -
+2025-09-04 09:39:14,600 - INFO - 127.0.0.1 - "GET /logo.png HTTP/1.1" 200 -

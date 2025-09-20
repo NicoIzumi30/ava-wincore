@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2789909b488fea288d14c9f5c6eaceac {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+</head>
+<body>
+    
+    
+    <script>
+    // Adjust panels on fullscreen toggle
+    document.addEventListener('fullscreenchange', adjustPanelsOnFullscreen);
+    document.addEventListener('webkitfullscreenchange', adjustPanelsOnFullscreen);
+    document.addEventListener('mozfullscreenchange', adjustPanelsOnFullscreen);
+    document.addEventListener('MSFullscreenChange', adjustPanelsOnFullscreen);
+    
+    function adjustPanelsOnFullscreen() {
+        const isFullscreen = document.fullscreenElement || 
+                            document.webkitFullscreenElement || 
+                            document.mozFullScreenElement || 
+                            document.msFullscreenElement;
+        
+        // List of all panels
+        const panels = document.querySelectorAll('.side-panel');
+        
+        if (isFullscreen) {
+            // In fullscreen, adjust z-index to make panels visible above map
+            panels.forEach(panel => {
+                panel.style.zIndex = '9999';
+            });
+        } else {
+            // Reset z-index when exiting fullscreen
+            panels.forEach(panel => {
+                panel.style.zIndex = '1000';
+            });
+        }
+    }
+    </script>
+    
+    
+     <div style="position: fixed; top: 20px; left: 450px; z-index: 1000;">
+            <img src="/logo.png" alt="Logo" style="width: 100px;border-radius: 5px;">
+        </div>
+    <div style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; 
+         background: #2c3e50; padding: 15px 20px; border-radius: 10px; 
+         box-shadow: 0 4px 20px rgba(0,0,0,0.3); border: 1px solid #34495e;">
+        
+        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <i class="fa fa-map-marked-alt" style="color: #3498db; font-size: 18px;"></i>
+                <span style="color: #ecf0f1; font-weight: 600; font-size: 16px;">Pilih Provinsi:</span>
+            </div>
+            
+            <select id="province-selector" onchange="changeProvince(this.value)" 
+                    style="padding: 8px 15px; border-radius: 6px; border: 1px solid #bdc3c7; 
+                    background: white; font-size: 14px; font-weight: 500; min-width: 200px; cursor: pointer;">
+    <option value="full" >🌏 Semua Provinsi</option><option value="peta_outlet_dki_jakarta.html" selected>🏙️ DKI JAKARTA</option><option value="peta_outlet_jawa_barat.html" >🏔️ JAWA BARAT</option><option value="peta_outlet_jawa_tengah.html" >🏛️ JAWA TENGAH</option><option value="peta_outlet_sumatera_selatan.html" >🌴 SUMATERA BAGIAN SELATAN</option><option value="peta_outlet_sumatera_utara.html" >🌿 SUMATERA BAGIAN UTARA</option>
+            </select>
+            
+            <div style="display: flex; align-items: center; gap: 8px; background: #34495e; 
+                        padding: 6px 12px; border-radius: 6px;">
+                <i class="fa fa-eye" style="color: #f39c12; font-size: 14px;"></i>
+                <span style="color: #ecf0f1; font-size: 12px; font-weight: 500;">
+                    Fokus: DKI JAKARTA
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function changeProvince(filename) {
+        if (filename === 'full') {
+            window.location.href = 'peta_outlet_full.html';
+        } else {
+            window.location.href = filename;
+        }
+    }
+    </script>
+    
+    
+    <style>
+    /* Common panel styles */
+    .side-panel {
+        position: fixed;
+        z-index: 1000;
+        background: #2c3e50;
+        color: #ecf0f1;
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        border: 1px solid #34495e;
+        transition: transform 0.3s ease;
+        max-width: 370px;
+    }
+    
+    /* Panel positions */
+    .right-panel {
+        right: 20px;
+        bottom: 200px;
+    }
+    
+    .left-panel {
+        left: 20px;
+        bottom: 100px;
+    }
+    
+    .top-panel {
+        top: 20px;
+        right: 20px;
+    }
+    
+    /* Toggle button styles */
+    .toggle-button {
+        position: absolute;
+        background: #2c3e50;
+        color: #ecf0f1;
+        width: 30px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid #34495e;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    /* Right panel toggle */
+    .right-panel .toggle-button {
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 10px 0 0 10px;
+        border-right: none;
+    }
+    
+    /* Left panel toggle */
+    .left-panel .toggle-button {
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 0 10px 10px 0;
+        border-left: none;
+    }
+    
+    /* Top panel toggle */
+    .top-panel .toggle-button {
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 30px;
+        border-radius: 0 0 10px 10px;
+        border-top: none;
+    }
+    
+    /* Collapsed states */
+    .right-panel.collapsed {
+        transform: translateX(calc(100% + 30px));
+    }
+    
+    .left-panel.collapsed {
+        transform: translateX(calc(-100% + -30px));
+    }
+    
+    .top-panel.collapsed {
+        transform: translateY(calc(-100% + -30px));
+    }
+    
+    /* Panel content */
+    .panel-content {
+        overflow: hidden;
+    }
+    </style>
+    
+    
+    <div id="map-legend" class="side-panel right-panel">
+        <div class="toggle-button" onclick="togglePanel('map-legend')">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="panel-content">
+            <h4 style="margin: 0 0 15px 0; font-size: 16px; font-weight: 600; color: #4169E1; 
+                       border-bottom: 2px solid #34495e; padding-bottom: 8px;">
+                🎯 Rating & Kategori
+            </h4>
+            
+            
+            <div style="margin-bottom: 15px;">
+                <h5 style="margin: 0 0 10px 0; color: #FFA500; font-size: 14px;">🎯 Clustering:</h5>
+                <div style="font-size: 11px; line-height: 1.6; color: #ecf0f1;">
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; margin-bottom: 3px;">
+                        📌 Klik cluster untuk zoom dan lihat detail
+                    </div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; margin-bottom: 3px;">
+                        🔍 Cluster otomatis berdasarkan rating outlet
+                    </div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px;">
+                        ⚙️ Gunakan layer control untuk on/off cluster
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div style="margin-bottom: 15px;">
+                <h5 style="margin: 0 0 10px 0; color: #FFA500; font-size: 14px;">Rating Outlet:</h5>
+                <div style="font-size: 12px; line-height: 1.8;">
+                    <div style="display: flex; align-items: center; margin-bottom: 5px; padding: 4px 8px; background: #34495e; border-radius: 4px;">
+                        <div style="width: 12px; height: 12px; background: #006400; border-radius: 2px; margin-right: 8px;"></div>
+                        <span>Excellent (7-9 fasilitas)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 5px; padding: 4px 8px; background: #34495e; border-radius: 4px;">
+                        <div style="width: 12px; height: 12px; background: #0066FF; border-radius: 2px; margin-right: 8px;"></div>
+                        <span>Very Good (5-6 fasilitas)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 5px; padding: 4px 8px; background: #34495e; border-radius: 4px;">
+                        <div style="width: 12px; height: 12px; background: #800080; border-radius: 2px; margin-right: 8px;"></div>
+                        <span>Good (3-4 fasilitas)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 5px; padding: 4px 8px; background: #34495e; border-radius: 4px;">
+                        <div style="width: 12px; height: 12px; background: #FF4500; border-radius: 2px; margin-right: 8px;"></div>
+                        <span>Fair (1-2 fasilitas)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; padding: 4px 8px; background: #34495e; border-radius: 4px;">
+                        <div style="width: 12px; height: 12px; background: #8B0000; border-radius: 2px; margin-right: 8px;"></div>
+                        <span>Poor (0 fasilitas)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <h5 style="margin: 0 0 10px 0; color: #FFA500; font-size: 14px;">Marker Types:</h5>
+                <div style="font-size: 11px; line-height: 1.6;">
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; margin-bottom: 3px;">
+                        🏢 <span style="color: #4169E1;">Outlet Utama</span>
+                    </div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; margin-bottom: 3px;">
+                        🏪 <span style="color: #008080;">Indomaret</span>
+                    </div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px;">
+                        🎯 <span style="color: #FFA500;">Fasilitas Sekitar</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h5 style="margin: 0 0 10px 0; color: #FFA500; font-size: 14px;">Kategori Fasilitas:</h5>
+                <div style="font-size: 11px; line-height: 1.6; display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🏠 Residential</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🎓 Education</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🌳 Public</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🍽️ Culinary</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">💼 Business</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🛒 Groceries</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🏪 Convenience</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🏭 Industrial</div>
+                    <div style="padding: 3px 6px; background: #34495e; border-radius: 3px; color: #fff;">🏥 Health</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="province-info" class="side-panel left-panel">
+        <div class="toggle-button" onclick="togglePanel('province-info')">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="panel-content">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                <div style="background: #4169E1; padding: 8px; border-radius: 6px; font-size: 20px;">
+                    🏙️
+                </div>
+                <div>
+                    <h3 style="margin: 0; font-size: 18px; font-weight: 600;">DKI JAKARTA</h3>
+                    <div style="font-size: 12px; color: #bdc3c7; margin-top: 2px;">Provinsi Focus Map</div>
+                </div>
+            </div>
+            
+            <div style="background: #34495e; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                <h4 style="margin: 0 0 12px 0; font-size: 14px; color: #FFA500;">📊 Data Provinsi:</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; font-size: 12px;">
+                    <div style="text-align: center; padding: 8px; background: #2c3e50; border-radius: 4px;">
+                        <div style="font-weight: bold; color: #4169E1;">7</div>
+                        <div style="color: #bdc3c7;">Outlets</div>
+                    </div>
+                    <div style="text-align: center; padding: 8px; background: #2c3e50; border-radius: 4px;">
+                        <div style="font-weight: bold; color: #FFA500;">0</div>
+                        <div style="color: #bdc3c7;">Fasilitas</div>
+                    </div>
+                    <div style="text-align: center; padding: 8px; background: #2c3e50; border-radius: 4px;">
+                        <div style="font-weight: bold; color: #008080;">19</div>
+                        <div style="color: #bdc3c7;">Indomaret</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: #FF0000; color: white; padding: 12px; border-radius: 8px; text-align: center;">
+                <div style="font-weight: bold; font-size: 14px; margin-bottom: 4px;">
+                    😤 Kompetisi Tinggi
+                </div>
+                <div style="font-size: 11px; opacity: 0.9;">
+                    19 Indomaret terdeteksi
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div style="position: fixed; top: 20px; left: 450px; z-index: 1000;">
+        <img src="/logo.png" alt="Logo" style="width: 100px;border-radius: 5px;">
+    </div>
+    
+    
+    <script>
+    // Function to toggle panel visibility
+    function togglePanel(panelId) {
+        const panel = document.getElementById(panelId);
+        if (!panel) return;
+        
+        // Toggle collapsed class
+        panel.classList.toggle('collapsed');
+        
+        // Save state in localStorage
+        localStorage.setItem(panelId + '_collapsed', panel.classList.contains('collapsed'));
+    }
+    
+    // Function to initialize panels on page load
+    function initPanels() {
+        // List of all panel IDs
+        const panelIds = ['map-legend', 'province-info', 'map-toolbar', 'full-map-info'];
+        
+        // Initialize each panel
+        panelIds.forEach(panelId => {
+            const panel = document.getElementById(panelId);
+            if (!panel) return;
+            
+            // Check stored state
+            const isCollapsed = localStorage.getItem(panelId + '_collapsed') === 'true';
+            
+            // Apply initial state
+            if (isCollapsed) {
+                panel.classList.add('collapsed');
+            } else {
+                panel.classList.remove('collapsed');
+            }
+            
+            // Update toggle button icon
+            const toggleButton = panel.querySelector('.toggle-button i');
+            if (toggleButton) {
+                if (panel.classList.contains('collapsed')) {
+                    if (panelId === 'map-toolbar') {
+                        toggleButton.className = 'fas fa-chevron-down';
+                    } else if (panelId.includes('info')) {
+                        toggleButton.className = 'fas fa-chevron-left';
+                    } else {
+                        toggleButton.className = 'fas fa-chevron-right';
+                    }
+                } else {
+                    if (panelId === 'map-toolbar') {
+                        toggleButton.className = 'fas fa-chevron-up';
+                    } else if (panelId.includes('info')) {
+                        toggleButton.className = 'fas fa-chevron-right';
+                    } else {
+                        toggleButton.className = 'fas fa-chevron-left';
+                    }
+                }
+            }
+        });
+    }
+    
+    // Initialize panels on page load
+    document.addEventListener('DOMContentLoaded', initPanels);
+    </script>
+    
+    
+            <div class="folium-map" id="map_2789909b488fea288d14c9f5c6eaceac" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2789909b488fea288d14c9f5c6eaceac = L.map(
+                "map_2789909b488fea288d14c9f5c6eaceac",
+                {
+                    center: [-6.133, 106.779],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8a20c028cf4e4261034a19630c1b802f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "Map data \u00a9 OpenStreetMap contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8a20c028cf4e4261034a19630c1b802f.addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var tile_layer_b6ef40034cc64d261e3bbf3b57900408 = L.tileLayer(
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Map data: \u00a9 OpenStreetMap contributors, SRTM | Map style: \u00a9 OpenTopoMap (CC-BY-SA)",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b6ef40034cc64d261e3bbf3b57900408.addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var tile_layer_1861f9d768d31d401ff55f05244716af = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 Esri \u2014 Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1861f9d768d31d401ff55f05244716af.addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var tile_layer_3c78c98047aee43e0ad869f83ccd6c13 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors \u00a9 CARTO",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3c78c98047aee43e0ad869f83ccd6c13.addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var tile_layer_7237053a6fa795841f40696f46809630 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors \u00a9 CARTO",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7237053a6fa795841f40696f46809630.addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var marker_20acdc2bd05096ba9b93d655724f433e = L.marker(
+                [-6.2088, 106.8456],
+                {
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var icon_70ff83a9fe125d014f1aef6fa3a91776 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a17a322d3e5be3396b0779b6af9a527e = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_de0ebd8d0f03809accdeed99f8ab8c7f = $(`<div id="html_de0ebd8d0f03809accdeed99f8ab8c7f" style="width: 100.0%; height: 100.0%;">     <div style="min-width: 380px; max-width: 450px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">         <div style="background: #2c3e50; color: white; padding: 18px; margin: -9px -9px 15px -9px; border-radius: 8px 8px 0 0;">             <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Test Outlet Excellent 1</h3>             <div style="margin-top: 8px; font-size: 14px; opacity: 0.9; display: flex; align-items: center; gap: 6px;">                 <i class="fa fa-map-marker" style="color: #3498db;"></i>                 <span>DKI JAKARTA</span>             </div>         </div>                           <div style="margin-bottom: 15px;">             <div style="background-color: #006400; color: white; padding: 10px; border-radius: 6px; text-align: center; font-weight: 600;">                 ⭐⭐⭐⭐⭐ Excellent (9/9 fasilitas)             </div>         </div>                  <div style="margin-bottom: 15px; padding: 12px; background: #ecf0f1; border-radius: 6px;">             <div style="font-size: 13px; color: #2c3e50;">                 <strong>📍 Koordinat:</strong> -6.2088, 106.8456             </div>         </div>                  <div style="margin-bottom: 15px;">             <h4 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px; font-weight: 600;">                 🏢 Fasilitas Sekitar (100m):             </h4>             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">                  <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-home" style="color: #228B22; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Residential</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-graduation-cap" style="color: #4169E1; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Education</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-tree" style="color: #FF00FF; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Public Area</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-utensils" style="color: #FFA500; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Culinary</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-briefcase" style="color: #40e0d0; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Business Center</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-cart" style="color: #008080; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Groceries</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-basket" style="color: #FFD700; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Convenient Stores</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-industry" style="color: #4B0082; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Industrial</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-plus" style="color: #DC143C; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Hospital/Clinic</span>                 <span style="margin-left: auto;">✅</span>             </div>                      </div>         </div>                                    <div style="margin-top: 15px;">             <a href="https://www.google.com/maps?q=-6.2088,106.8456" target="_blank"                 style="display: block; padding: 12px; background: #4169E1; color: white; text-decoration: none;                 border-radius: 6px; text-align: center; font-weight: 600; transition: background 0.3s;">                 <i class="fa fa-external-link" style="margin-right: 8px;"></i>Buka di Google Maps             </a>         </div>                  <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #7f8c8d;                      padding: 8px; background: #f8f9fa; border-radius: 4px;">             📊 Data analisis dalam radius 100 meter         </div>     </div>     </div>`)[0];
+                popup_a17a322d3e5be3396b0779b6af9a527e.setContent(html_de0ebd8d0f03809accdeed99f8ab8c7f);
+            
+        
+
+        marker_20acdc2bd05096ba9b93d655724f433e.bindPopup(popup_a17a322d3e5be3396b0779b6af9a527e)
+        ;
+
+        
+    
+    
+            marker_20acdc2bd05096ba9b93d655724f433e.bindTooltip(
+                `<div>
+                     🏢 Test Outlet Excellent 1 (DKI JAKARTA) - 9/9 fasilitas, 5 Indomaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_20acdc2bd05096ba9b93d655724f433e.setIcon(icon_70ff83a9fe125d014f1aef6fa3a91776);
+            
+    
+            var marker_0fd895539fbfc2a3376c79022a61f084 = L.marker(
+                [-6.2188, 106.8556],
+                {
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var icon_5cc67c353fdce42536937a1f84be2cf5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "thumbs-up",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2988cfaf56cc2b44ba4c960861381d15 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_e3d64ad6e7e1c3f25b9450ae8fee8740 = $(`<div id="html_e3d64ad6e7e1c3f25b9450ae8fee8740" style="width: 100.0%; height: 100.0%;">     <div style="min-width: 380px; max-width: 450px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">         <div style="background: #2c3e50; color: white; padding: 18px; margin: -9px -9px 15px -9px; border-radius: 8px 8px 0 0;">             <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Test Outlet Very Good 1</h3>             <div style="margin-top: 8px; font-size: 14px; opacity: 0.9; display: flex; align-items: center; gap: 6px;">                 <i class="fa fa-map-marker" style="color: #3498db;"></i>                 <span>DKI JAKARTA</span>             </div>         </div>                           <div style="margin-bottom: 15px;">             <div style="background-color: #0066FF; color: white; padding: 10px; border-radius: 6px; text-align: center; font-weight: 600;">                 ⭐⭐⭐⭐ Very Good (5/9 fasilitas)             </div>         </div>                  <div style="margin-bottom: 15px; padding: 12px; background: #ecf0f1; border-radius: 6px;">             <div style="font-size: 13px; color: #2c3e50;">                 <strong>📍 Koordinat:</strong> -6.2188, 106.8556             </div>         </div>                  <div style="margin-bottom: 15px;">             <h4 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px; font-weight: 600;">                 🏢 Fasilitas Sekitar (100m):             </h4>             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">                  <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-home" style="color: #228B22; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Residential</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-graduation-cap" style="color: #4169E1; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Education</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-tree" style="color: #FF00FF; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Public Area</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-utensils" style="color: #FFA500; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Culinary</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-briefcase" style="color: #40e0d0; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Business Center</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-cart" style="color: #008080; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Groceries</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-basket" style="color: #FFD700; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Convenient Stores</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-industry" style="color: #4B0082; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Industrial</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-plus" style="color: #DC143C; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Hospital/Clinic</span>                 <span style="margin-left: auto;">❌</span>             </div>                      </div>         </div>                                    <div style="margin-top: 15px;">             <a href="https://www.google.com/maps?q=-6.2188,106.8556" target="_blank"                 style="display: block; padding: 12px; background: #4169E1; color: white; text-decoration: none;                 border-radius: 6px; text-align: center; font-weight: 600; transition: background 0.3s;">                 <i class="fa fa-external-link" style="margin-right: 8px;"></i>Buka di Google Maps             </a>         </div>                  <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #7f8c8d;                      padding: 8px; background: #f8f9fa; border-radius: 4px;">             📊 Data analisis dalam radius 100 meter         </div>     </div>     </div>`)[0];
+                popup_2988cfaf56cc2b44ba4c960861381d15.setContent(html_e3d64ad6e7e1c3f25b9450ae8fee8740);
+            
+        
+
+        marker_0fd895539fbfc2a3376c79022a61f084.bindPopup(popup_2988cfaf56cc2b44ba4c960861381d15)
+        ;
+
+        
+    
+    
+            marker_0fd895539fbfc2a3376c79022a61f084.bindTooltip(
+                `<div>
+                     🏢 Test Outlet Very Good 1 (DKI JAKARTA) - 5/9 fasilitas, 2 Indomaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0fd895539fbfc2a3376c79022a61f084.setIcon(icon_5cc67c353fdce42536937a1f84be2cf5);
+            
+    
+            var marker_54b60e9eabd0b7d9a91557f8abc185a0 = L.marker(
+                [-6.2288, 106.8656],
+                {
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var icon_8579c51c4fd76f7237638be496545d71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "ok-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_331562616bb6b5705ed3349a31ea5d4d = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_70f93588dbc42d68245aace0ccdfbb3a = $(`<div id="html_70f93588dbc42d68245aace0ccdfbb3a" style="width: 100.0%; height: 100.0%;">     <div style="min-width: 380px; max-width: 450px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">         <div style="background: #2c3e50; color: white; padding: 18px; margin: -9px -9px 15px -9px; border-radius: 8px 8px 0 0;">             <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Test Outlet Good 1</h3>             <div style="margin-top: 8px; font-size: 14px; opacity: 0.9; display: flex; align-items: center; gap: 6px;">                 <i class="fa fa-map-marker" style="color: #3498db;"></i>                 <span>DKI JAKARTA</span>             </div>         </div>                           <div style="margin-bottom: 15px;">             <div style="background-color: #800080; color: white; padding: 10px; border-radius: 6px; text-align: center; font-weight: 600;">                 ⭐⭐⭐ Good (3/9 fasilitas)             </div>         </div>                  <div style="margin-bottom: 15px; padding: 12px; background: #ecf0f1; border-radius: 6px;">             <div style="font-size: 13px; color: #2c3e50;">                 <strong>📍 Koordinat:</strong> -6.2288, 106.8656             </div>         </div>                  <div style="margin-bottom: 15px;">             <h4 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px; font-weight: 600;">                 🏢 Fasilitas Sekitar (100m):             </h4>             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">                  <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-home" style="color: #228B22; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Residential</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-graduation-cap" style="color: #4169E1; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Education</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-tree" style="color: #FF00FF; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Public Area</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-utensils" style="color: #FFA500; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Culinary</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-briefcase" style="color: #40e0d0; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Business Center</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-cart" style="color: #008080; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Groceries</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-basket" style="color: #FFD700; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Convenient Stores</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-industry" style="color: #4B0082; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Industrial</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-plus" style="color: #DC143C; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Hospital/Clinic</span>                 <span style="margin-left: auto;">❌</span>             </div>                      </div>         </div>                                    <div style="margin-top: 15px;">             <a href="https://www.google.com/maps?q=-6.2288,106.8656" target="_blank"                 style="display: block; padding: 12px; background: #4169E1; color: white; text-decoration: none;                 border-radius: 6px; text-align: center; font-weight: 600; transition: background 0.3s;">                 <i class="fa fa-external-link" style="margin-right: 8px;"></i>Buka di Google Maps             </a>         </div>                  <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #7f8c8d;                      padding: 8px; background: #f8f9fa; border-radius: 4px;">             📊 Data analisis dalam radius 100 meter         </div>     </div>     </div>`)[0];
+                popup_331562616bb6b5705ed3349a31ea5d4d.setContent(html_70f93588dbc42d68245aace0ccdfbb3a);
+            
+        
+
+        marker_54b60e9eabd0b7d9a91557f8abc185a0.bindPopup(popup_331562616bb6b5705ed3349a31ea5d4d)
+        ;
+
+        
+    
+    
+            marker_54b60e9eabd0b7d9a91557f8abc185a0.bindTooltip(
+                `<div>
+                     🏢 Test Outlet Good 1 (DKI JAKARTA) - 3/9 fasilitas, 1 Indomaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54b60e9eabd0b7d9a91557f8abc185a0.setIcon(icon_8579c51c4fd76f7237638be496545d71);
+            
+    
+            var marker_9c2c21e8953d390919356c89272aa147 = L.marker(
+                [-6.2388, 106.8756],
+                {
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var icon_f1a475c29ff7eb7c5dc51e6ea2ef7270 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "minus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_073a431986655774439155acab20b6be = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_a01b02ab0cc16e37899eb3f1c8c3333c = $(`<div id="html_a01b02ab0cc16e37899eb3f1c8c3333c" style="width: 100.0%; height: 100.0%;">     <div style="min-width: 380px; max-width: 450px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">         <div style="background: #2c3e50; color: white; padding: 18px; margin: -9px -9px 15px -9px; border-radius: 8px 8px 0 0;">             <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Test Outlet Fair 1</h3>             <div style="margin-top: 8px; font-size: 14px; opacity: 0.9; display: flex; align-items: center; gap: 6px;">                 <i class="fa fa-map-marker" style="color: #3498db;"></i>                 <span>DKI JAKARTA</span>             </div>         </div>                           <div style="margin-bottom: 15px;">             <div style="background-color: #FF4500; color: white; padding: 10px; border-radius: 6px; text-align: center; font-weight: 600;">                 ⭐⭐ Fair (1/9 fasilitas)             </div>         </div>                  <div style="margin-bottom: 15px; padding: 12px; background: #ecf0f1; border-radius: 6px;">             <div style="font-size: 13px; color: #2c3e50;">                 <strong>📍 Koordinat:</strong> -6.2388, 106.8756             </div>         </div>                  <div style="margin-bottom: 15px;">             <h4 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px; font-weight: 600;">                 🏢 Fasilitas Sekitar (100m):             </h4>             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">                  <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-home" style="color: #228B22; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Residential</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-graduation-cap" style="color: #4169E1; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Education</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-tree" style="color: #FF00FF; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Public Area</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-utensils" style="color: #FFA500; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Culinary</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-briefcase" style="color: #40e0d0; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Business Center</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-cart" style="color: #008080; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Groceries</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-basket" style="color: #FFD700; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Convenient Stores</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-industry" style="color: #4B0082; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Industrial</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-plus" style="color: #DC143C; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Hospital/Clinic</span>                 <span style="margin-left: auto;">❌</span>             </div>                      </div>         </div>                                    <div style="margin-top: 15px;">             <a href="https://www.google.com/maps?q=-6.2388,106.8756" target="_blank"                 style="display: block; padding: 12px; background: #4169E1; color: white; text-decoration: none;                 border-radius: 6px; text-align: center; font-weight: 600; transition: background 0.3s;">                 <i class="fa fa-external-link" style="margin-right: 8px;"></i>Buka di Google Maps             </a>         </div>                  <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #7f8c8d;                      padding: 8px; background: #f8f9fa; border-radius: 4px;">             📊 Data analisis dalam radius 100 meter         </div>     </div>     </div>`)[0];
+                popup_073a431986655774439155acab20b6be.setContent(html_a01b02ab0cc16e37899eb3f1c8c3333c);
+            
+        
+
+        marker_9c2c21e8953d390919356c89272aa147.bindPopup(popup_073a431986655774439155acab20b6be)
+        ;
+
+        
+    
+    
+            marker_9c2c21e8953d390919356c89272aa147.bindTooltip(
+                `<div>
+                     🏢 Test Outlet Fair 1 (DKI JAKARTA) - 1/9 fasilitas, 0 Indomaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c2c21e8953d390919356c89272aa147.setIcon(icon_f1a475c29ff7eb7c5dc51e6ea2ef7270);
+            
+    
+            var marker_feb6ba9b9c6a9f49a0ec9d4a928dec38 = L.marker(
+                [-6.2488, 106.8856],
+                {
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var icon_73d4992c39d01ad42c86b3e2af28afb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f551c0a86b802156467c39ea2ac4e63 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_ed6048624fd0e5d5e213dfaa09d2935d = $(`<div id="html_ed6048624fd0e5d5e213dfaa09d2935d" style="width: 100.0%; height: 100.0%;">     <div style="min-width: 380px; max-width: 450px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">         <div style="background: #2c3e50; color: white; padding: 18px; margin: -9px -9px 15px -9px; border-radius: 8px 8px 0 0;">             <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Test Outlet Poor 1</h3>             <div style="margin-top: 8px; font-size: 14px; opacity: 0.9; display: flex; align-items: center; gap: 6px;">                 <i class="fa fa-map-marker" style="color: #3498db;"></i>                 <span>DKI JAKARTA</span>             </div>         </div>                           <div style="margin-bottom: 15px;">             <div style="background-color: #8B0000; color: white; padding: 10px; border-radius: 6px; text-align: center; font-weight: 600;">                 ⭐ Poor (0/9 fasilitas)             </div>         </div>                  <div style="margin-bottom: 15px; padding: 12px; background: #ecf0f1; border-radius: 6px;">             <div style="font-size: 13px; color: #2c3e50;">                 <strong>📍 Koordinat:</strong> -6.2488, 106.8856             </div>         </div>                  <div style="margin-bottom: 15px;">             <h4 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px; font-weight: 600;">                 🏢 Fasilitas Sekitar (100m):             </h4>             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">                  <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-home" style="color: #228B22; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Residential</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-graduation-cap" style="color: #4169E1; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Education</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-tree" style="color: #FF00FF; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Public Area</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-utensils" style="color: #FFA500; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Culinary</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-briefcase" style="color: #40e0d0; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Business Center</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-cart" style="color: #008080; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Groceries</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-basket" style="color: #FFD700; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Convenient Stores</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-industry" style="color: #4B0082; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Industrial</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-plus" style="color: #DC143C; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Hospital/Clinic</span>                 <span style="margin-left: auto;">❌</span>             </div>                      </div>         </div>                                    <div style="margin-top: 15px;">             <a href="https://www.google.com/maps?q=-6.2488,106.8856" target="_blank"                 style="display: block; padding: 12px; background: #4169E1; color: white; text-decoration: none;                 border-radius: 6px; text-align: center; font-weight: 600; transition: background 0.3s;">                 <i class="fa fa-external-link" style="margin-right: 8px;"></i>Buka di Google Maps             </a>         </div>                  <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #7f8c8d;                      padding: 8px; background: #f8f9fa; border-radius: 4px;">             📊 Data analisis dalam radius 100 meter         </div>     </div>     </div>`)[0];
+                popup_0f551c0a86b802156467c39ea2ac4e63.setContent(html_ed6048624fd0e5d5e213dfaa09d2935d);
+            
+        
+
+        marker_feb6ba9b9c6a9f49a0ec9d4a928dec38.bindPopup(popup_0f551c0a86b802156467c39ea2ac4e63)
+        ;
+
+        
+    
+    
+            marker_feb6ba9b9c6a9f49a0ec9d4a928dec38.bindTooltip(
+                `<div>
+                     🏢 Test Outlet Poor 1 (DKI JAKARTA) - 0/9 fasilitas, 0 Indomaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_feb6ba9b9c6a9f49a0ec9d4a928dec38.setIcon(icon_73d4992c39d01ad42c86b3e2af28afb5);
+            
+    
+            var marker_2ef6d1595574a00b42fe356e9f1bfd36 = L.marker(
+                [-6.2098, 106.8466],
+                {
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var icon_b4b6dd632bdde54da7b52d4736b37f41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5288a66047714aa1323e28b1a15023c = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_88ed9c7358e826f3ce5c14a3099a1023 = $(`<div id="html_88ed9c7358e826f3ce5c14a3099a1023" style="width: 100.0%; height: 100.0%;">     <div style="min-width: 380px; max-width: 450px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">         <div style="background: #2c3e50; color: white; padding: 18px; margin: -9px -9px 15px -9px; border-radius: 8px 8px 0 0;">             <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Test Outlet Excellent 2</h3>             <div style="margin-top: 8px; font-size: 14px; opacity: 0.9; display: flex; align-items: center; gap: 6px;">                 <i class="fa fa-map-marker" style="color: #3498db;"></i>                 <span>DKI JAKARTA</span>             </div>         </div>                           <div style="margin-bottom: 15px;">             <div style="background-color: #006400; color: white; padding: 10px; border-radius: 6px; text-align: center; font-weight: 600;">                 ⭐⭐⭐⭐⭐ Excellent (9/9 fasilitas)             </div>         </div>                  <div style="margin-bottom: 15px; padding: 12px; background: #ecf0f1; border-radius: 6px;">             <div style="font-size: 13px; color: #2c3e50;">                 <strong>📍 Koordinat:</strong> -6.2098, 106.8466             </div>         </div>                  <div style="margin-bottom: 15px;">             <h4 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px; font-weight: 600;">                 🏢 Fasilitas Sekitar (100m):             </h4>             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">                  <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-home" style="color: #228B22; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Residential</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-graduation-cap" style="color: #4169E1; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Education</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-tree" style="color: #FF00FF; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Public Area</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-utensils" style="color: #FFA500; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Culinary</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-briefcase" style="color: #40e0d0; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Business Center</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-cart" style="color: #008080; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Groceries</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-basket" style="color: #FFD700; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Convenient Stores</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-industry" style="color: #4B0082; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Industrial</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-plus" style="color: #DC143C; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Hospital/Clinic</span>                 <span style="margin-left: auto;">✅</span>             </div>                      </div>         </div>                                    <div style="margin-top: 15px;">             <a href="https://www.google.com/maps?q=-6.2098,106.8466" target="_blank"                 style="display: block; padding: 12px; background: #4169E1; color: white; text-decoration: none;                 border-radius: 6px; text-align: center; font-weight: 600; transition: background 0.3s;">                 <i class="fa fa-external-link" style="margin-right: 8px;"></i>Buka di Google Maps             </a>         </div>                  <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #7f8c8d;                      padding: 8px; background: #f8f9fa; border-radius: 4px;">             📊 Data analisis dalam radius 100 meter         </div>     </div>     </div>`)[0];
+                popup_f5288a66047714aa1323e28b1a15023c.setContent(html_88ed9c7358e826f3ce5c14a3099a1023);
+            
+        
+
+        marker_2ef6d1595574a00b42fe356e9f1bfd36.bindPopup(popup_f5288a66047714aa1323e28b1a15023c)
+        ;
+
+        
+    
+    
+            marker_2ef6d1595574a00b42fe356e9f1bfd36.bindTooltip(
+                `<div>
+                     🏢 Test Outlet Excellent 2 (DKI JAKARTA) - 9/9 fasilitas, 8 Indomaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2ef6d1595574a00b42fe356e9f1bfd36.setIcon(icon_b4b6dd632bdde54da7b52d4736b37f41);
+            
+    
+            var marker_b5fe0025ee357d207c2d888baa6fe0e6 = L.marker(
+                [-6.2198, 106.8566],
+                {
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var icon_b971ec963c1c145f615b61b5489b8b7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "thumbs-up",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4172c4284d6dd2a64a127708c423715e = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_d9f7a963ac48f423e7a2cca8e5ea63e4 = $(`<div id="html_d9f7a963ac48f423e7a2cca8e5ea63e4" style="width: 100.0%; height: 100.0%;">     <div style="min-width: 380px; max-width: 450px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">         <div style="background: #2c3e50; color: white; padding: 18px; margin: -9px -9px 15px -9px; border-radius: 8px 8px 0 0;">             <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Test Outlet Very Good 2</h3>             <div style="margin-top: 8px; font-size: 14px; opacity: 0.9; display: flex; align-items: center; gap: 6px;">                 <i class="fa fa-map-marker" style="color: #3498db;"></i>                 <span>DKI JAKARTA</span>             </div>         </div>                           <div style="margin-bottom: 15px;">             <div style="background-color: #0066FF; color: white; padding: 10px; border-radius: 6px; text-align: center; font-weight: 600;">                 ⭐⭐⭐⭐ Very Good (6/9 fasilitas)             </div>         </div>                  <div style="margin-bottom: 15px; padding: 12px; background: #ecf0f1; border-radius: 6px;">             <div style="font-size: 13px; color: #2c3e50;">                 <strong>📍 Koordinat:</strong> -6.2198, 106.8566             </div>         </div>                  <div style="margin-bottom: 15px;">             <h4 style="margin: 0 0 12px 0; color: #2c3e50; font-size: 15px; font-weight: 600;">                 🏢 Fasilitas Sekitar (100m):             </h4>             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">                  <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-home" style="color: #228B22; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Residential</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-graduation-cap" style="color: #4169E1; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Education</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-tree" style="color: #FF00FF; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Public Area</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-utensils" style="color: #FFA500; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Culinary</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-briefcase" style="color: #40e0d0; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Business Center</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 1.0;                          background: #d5f4e6; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-cart" style="color: #008080; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Groceries</span>                 <span style="margin-left: auto;">✅</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-shopping-basket" style="color: #FFD700; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Convenient Stores</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-industry" style="color: #4B0082; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Industrial</span>                 <span style="margin-left: auto;">❌</span>             </div>                      <div style="display: flex; align-items: center; padding: 8px; opacity: 0.4;                          background: #f8f9fa; border-radius: 4px; margin-bottom: 2px;">                 <i class="fa fa-plus" style="color: #DC143C; margin-right: 8px; width: 16px;"></i>                 <span style="font-size: 12px; flex: 1; color: #2c3e50;">Hospital/Clinic</span>                 <span style="margin-left: auto;">❌</span>             </div>                      </div>         </div>                                    <div style="margin-top: 15px;">             <a href="https://www.google.com/maps?q=-6.2198,106.8566" target="_blank"                 style="display: block; padding: 12px; background: #4169E1; color: white; text-decoration: none;                 border-radius: 6px; text-align: center; font-weight: 600; transition: background 0.3s;">                 <i class="fa fa-external-link" style="margin-right: 8px;"></i>Buka di Google Maps             </a>         </div>                  <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #7f8c8d;                      padding: 8px; background: #f8f9fa; border-radius: 4px;">             📊 Data analisis dalam radius 100 meter         </div>     </div>     </div>`)[0];
+                popup_4172c4284d6dd2a64a127708c423715e.setContent(html_d9f7a963ac48f423e7a2cca8e5ea63e4);
+            
+        
+
+        marker_b5fe0025ee357d207c2d888baa6fe0e6.bindPopup(popup_4172c4284d6dd2a64a127708c423715e)
+        ;
+
+        
+    
+    
+            marker_b5fe0025ee357d207c2d888baa6fe0e6.bindTooltip(
+                `<div>
+                     🏢 Test Outlet Very Good 2 (DKI JAKARTA) - 6/9 fasilitas, 3 Indomaret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5fe0025ee357d207c2d888baa6fe0e6.setIcon(icon_b971ec963c1c145f615b61b5489b8b7b);
+            
+    
+            var layer_control_bfc553a209ea4bedb7b87153426229a3_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_8a20c028cf4e4261034a19630c1b802f,
+                    "\ud83d\uddfb Topographic" : tile_layer_b6ef40034cc64d261e3bbf3b57900408,
+                    "\ud83d\udef0\ufe0f Satellite" : tile_layer_1861f9d768d31d401ff55f05244716af,
+                    "\ud83c\udf19 Dark Mode" : tile_layer_3c78c98047aee43e0ad869f83ccd6c13,
+                    "\u2600\ufe0f Light Mode" : tile_layer_7237053a6fa795841f40696f46809630,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_bfc553a209ea4bedb7b87153426229a3 = L.control.layers(
+                layer_control_bfc553a209ea4bedb7b87153426229a3_layers.base_layers,
+                layer_control_bfc553a209ea4bedb7b87153426229a3_layers.overlays,
+                {
+  "position": "bottomright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Mode Fullscreen",
+  "titleCancel": "Keluar Fullscreen",
+  "forceSeparateButton": true,
+}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+        
+    
+            var measure_control_3082c1050c16e11ab1bf20946b9124ca = new L.Control.Measure(
+                {
+  "position": "bottomleft",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "kilometers",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "hectares",
+});
+            map_2789909b488fea288d14c9f5c6eaceac.addControl(measure_control_3082c1050c16e11ab1bf20946b9124ca);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var locate_control_95a8cb2dfd5251790378920fd2760d79 = L.control.locate(
+                {"position": "topleft"}
+            ).addTo(map_2789909b488fea288d14c9f5c6eaceac);
+            
+        
+</script>
+</html>
