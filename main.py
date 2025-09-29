@@ -214,7 +214,7 @@ def main():
     print()
     print("Provinsi yang akan dibuat maps:")
     for province, outlets in outlets_by_province.items():
-        if province in ['JAKARTA', 'JAWA BARAT', 'JAWA TENGAH', 'SUMBAGSEL', 'SUMBAGUT', 'JATIMBALIKAL', 'SULTER']:
+        if province in ['JAKARTA', 'JAWA BARAT', 'JAWA TENGAH', 'SUMBAGSEL', 'SUMBAGUT', 'JATIMBANUSKAL', 'SULTER']:
             # Hitung Indomaret di provinsi ini
             indomaret_in_province = 0
             if indomaret_handler:
@@ -407,7 +407,7 @@ def main():
                 facilities_count += sum(len(places) for places in detailed_facilities.values())
                 indomaret_count += outlet.get('Indomaret_Count', 0)
             
-            status = "✅" if province in ['JAKARTA', 'JAWA BARAT', 'JAWA TENGAH', 'SUMBAGSEL', 'SUMBAGUT', 'JATIMBALIKAL', 'SULTER'] else "⚠️"
+            status = "✅" if province in ['JAKARTA', 'JAWA BARAT', 'JAWA TENGAH', 'SUMBAGSEL', 'SUMBAGUT', 'JATIMBANUSKAL', 'SULTER'] else "⚠️"
             print(f"   {status} {province}: {len(outlets)} outlets, {facilities_count} fasilitas, {indomaret_count} Indomaret")
     
     # Hitung waktu eksekusi

@@ -15,7 +15,7 @@ API_TIMEOUT = 25  # Timeout API dalam detik
 
 # Overpass API endpoints untuk redundansi
 OVERPASS_ENDPOINTS = [
-    # "http://localhost:12345/api/interpreter",
+    "http://31.97.187.239:12345/api/interpreter",
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
 ]
@@ -66,11 +66,11 @@ PROVINCE_BOUNDS = {
         'zoom': 7,
         'filename': 'sumatera_utara'
     },
-    'JATIMBALIKAL': {
+    'JATIMBANUSKAL': {
     'bounds': [[-1.000, 110.000], [-9.500, 119.500]],
     'center': [-5.600, 113.800],
     'zoom': 6,
-    'filename': 'jatimbalikal'
+    'filename': 'jatimbanuskal'
 },'SULTER': {
     'bounds': [[-3.000, 120.000], [-6.500, 124.000]],
     'center': [-4.800, 122.500],

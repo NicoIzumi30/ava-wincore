@@ -187,7 +187,7 @@ def get_province_emoji(province):
         'JAWA TENGAH': '🏛️',
         'SUMBAGSEL': '🌴',
         'SUMBAGUT': '🌿',
-        'JATIMBALIKAL': '🏝️',
+        'JATIMBANUSKAL': '🏝️',
         'SULTER': '🌺'
     }
     return emoji_map.get(province, '📍')
@@ -208,7 +208,7 @@ def get_province_short_name(province):
         'JAWA TENGAH': 'Jateng',
         'SUMBAGSEL': 'Sumsel',
         'SUMBAGUT': 'Sumut',
-        'JATIMBALIKAL': 'Jatimbalikal',
+        'JATIMBANUSKAL': 'Jatimbalikal',
         'SULTER': 'Sulter'
     }
     return short_name_map.get(province, province)

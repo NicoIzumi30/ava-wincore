@@ -69,9 +69,9 @@ def load_data_from_spreadsheet():
         # Kolom 11 (index 10): Nama Outlet
         # Kolom 6 (index 5): Kecamatan
         # Kolom 13 (index 12): Koordinat
-        NAMA_OUTLET_IDX = 4
-        KECAMATAN_IDX = 6
-        KOORDINAT_IDX = 8
+        NAMA_OUTLET_IDX = 14
+        KECAMATAN_IDX = 5
+        KOORDINAT_IDX = 16
         
         # Pastikan indeks valid
         if len(header) <= max(NAMA_OUTLET_IDX, KECAMATAN_IDX, KOORDINAT_IDX):

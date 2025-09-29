@@ -1,10 +1,56 @@
 {
-  "generated_at": "2025-09-20T22:40:39.654046",
+  "generated_at": "2025-09-30T02:59:13.019546",
   "navigation_style": "dropdown",
   "provinces": {
+    "SUMBAGSEL": {
+      "outlets_count": 28,
+      "facilities_count": 39,
+      "config": {
+        "bounds": [
+          [
+            -1.917,
+            100.0
+          ],
+          [
+            -6.385,
+            108.0
+          ]
+        ],
+        "center": [
+          -4.151,
+          104.0
+        ],
+        "zoom": 7,
+        "filename": "sumatera_selatan"
+      },
+      "filename": "peta_outlet_sumatera_selatan.html"
+    },
+    "JATIMBANUSKAL": {
+      "outlets_count": 411,
+      "facilities_count": 1227,
+      "config": {
+        "bounds": [
+          [
+            -1.0,
+            110.0
+          ],
+          [
+            -9.5,
+            119.5
+          ]
+        ],
+        "center": [
+          -5.6,
+          113.8
+        ],
+        "zoom": 6,
+        "filename": "jatimbanuskal"
+      },
+      "filename": "peta_outlet_jatimbanuskal.html"
+    },
     "SUMBAGUT": {
-      "outlets_count": 31,
-      "facilities_count": 152,
+      "outlets_count": 403,
+      "facilities_count": 1200,
       "config": {
         "bounds": [
           [
@@ -24,29 +70,6 @@
         "filename": "sumatera_utara"
       },
       "filename": "peta_outlet_sumatera_utara.html"
-    },
-    "JATIMBALIKAL": {
-      "outlets_count": 25,
-      "facilities_count": 84,
-      "config": {
-        "bounds": [
-          [
-            -1.0,
-            110.0
-          ],
-          [
-            -9.5,
-            119.5
-          ]
-        ],
-        "center": [
-          -5.6,
-          113.8
-        ],
-        "zoom": 6,
-        "filename": "jatimbalikal"
-      },
-      "filename": "peta_outlet_jatimbalikal.html"
     }
   },
   "files": {
@@ -57,7 +80,7 @@
       "JAWA TENGAH": "peta_outlet_jawa_tengah.html",
       "SUMBAGSEL": "peta_outlet_sumatera_selatan.html",
       "SUMBAGUT": "peta_outlet_sumatera_utara.html",
-      "JATIMBALIKAL": "peta_outlet_jatimbalikal.html",
+      "JATIMBANUSKAL": "peta_outlet_jatimbanuskal.html",
       "SULTER": "peta_outlet_sulter.html"
     }
   }
