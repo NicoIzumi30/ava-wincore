@@ -102,7 +102,7 @@ tail -f /dev/null
 ### 2. Build Docker Image
 
 ```bash
-docker build -t outlet-analisis .
+docker build -t ava-wincore .
 ```
 
 ### 3. Jalankan Container
@@ -111,48 +111,48 @@ Pilih salah satu opsi berikut:
 
 #### Opsi A: Dengan port yang ditentukan (8082 di contoh ini)
 ```bash
-docker run -d -p 8080:8080 --name outlet-analisis outlet-analisis
+docker run -d -p 8080:8080 --name ava-wincore ava-wincore
 ```
 Web server akan dapat diakses di http://localhost:8082
 
 #### Opsi B: Dengan port yang ditentukan Docker secara otomatis
 ```bash
-docker run -d -P --name outlet-analisis outlet-analisis
+docker run -d -P --name ava-wincore ava-wincore
 ```
 
 Untuk mengetahui port yang digunakan:
 ```bash
-docker port outlet-analisis
+docker port ava-wincore
 ```
 
 ## Manajemen Container
 
 ### Melihat Status Container
 ```bash
-docker ps -a | grep outlet-analisis
+docker ps -a | grep ava-wincore
 ```
 
 ### Menghentikan Container
 ```bash
-docker stop outlet-analisis
+docker stop ava-wincore
 ```
 
 ### Menjalankan Kembali Container yang Terhenti
 ```bash
-docker start outlet-analisis
+docker start ava-wincore
 ```
 
 ### Menghapus Container
 ```bash
-docker stop outlet-analisis
-docker rm outlet-analisis
+docker stop ava-wincore
+docker rm ava-wincore
 ```
 
 ## Mengakses dan Mengelola Aplikasi Dalam Container
 
 ### 1. Masuk ke Container
 ```bash
-docker exec -it outlet-analisis /bin/bash
+docker exec -it ava-wincore /bin/bash
 ```
 
 ### 2. Memeriksa Status Aplikasi
@@ -165,7 +165,7 @@ Setelah masuk ke container:
 
 #### Cara A: Dari luar container
 ```bash
-docker exec -it outlet-analisis python3 /app/auto_update.py
+docker exec -it ava-wincore python3 /app/auto_update.py
 ```
 
 #### Cara B: Dari dalam container
@@ -182,19 +182,19 @@ Setelah masuk ke container, jalankan `./check_status.sh` dan pilih "y" saat dita
 
 #### Web Server Log
 ```bash
-docker exec -it outlet-analisis cat /app/web_server.log
+docker exec -it ava-wincore cat /app/web_server.log
 ```
 
 #### Cron Update Log
 ```bash
-docker exec -it outlet-analisis cat /app/cron.log
+docker exec -it ava-wincore cat /app/cron.log
 ```
 
 ### 5. Memeriksa Timezone
 
 Untuk memastikan timezone sudah diatur dengan benar:
 ```bash
-docker exec -it outlet-analisis date
+docker exec -it ava-wincore date
 ```
 
 Output seharusnya menunjukkan waktu WIB (GMT+7).
@@ -204,7 +204,7 @@ Output seharusnya menunjukkan waktu WIB (GMT+7).
 Jika Anda ingin menyimpan data secara permanen di host, gunakan volume:
 
 ```bash
-docker run -d -p 8082:8080 -v /path/di/host:/app/output --name outlet-analisis outlet-analisis
+docker run -d -p 8082:8080 -v /path/di/host:/app/output --name ava-wincore ava-wincore
 ```
 
 Ganti `/path/di/host` dengan direktori di sistem Anda.
